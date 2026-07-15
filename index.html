@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programa ÉTICO — Clube Atlético Mineiro</title>
+<meta name="description" content="Conheça o Programa ÉTICO do Clube Atlético Mineiro: um programa de integridade completo com governança, políticas, cultura, ESG e Canal Ético.">
+<meta name="theme-color" content="#101010">
+<link rel="canonical" href="https://compliance.atletico.com.br/">
+<link rel="icon" type="image/png" href="./assets/escudo-atletico.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Programa ÉTICO · Clube Atlético Mineiro">
+<meta property="og:title" content="Programa ÉTICO — Clube Atlético Mineiro">
+<meta property="og:description" content="Conheça o Programa de Integridade do Clube Atlético Mineiro: governança, políticas, cultura, ESG e Canal Ético.">
+<meta property="og:url" content="https://compliance.atletico.com.br/">
+<meta property="og:image" content="https://compliance.atletico.com.br/assets/etico-logo-fundo-preto.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Programa ÉTICO — Clube Atlético Mineiro">
+<meta name="twitter:description" content="Conheça o Programa de Integridade do Clube Atlético Mineiro.">
+<meta name="twitter:image" content="https://compliance.atletico.com.br/assets/etico-logo-fundo-preto.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Programa ÉTICO — Clube Atlético Mineiro",
+  "description": "Programa de Integridade do Clube Atlético Mineiro",
+  "url": "https://compliance.atletico.com.br/",
+  "publisher": {
+    "@type": "SportsTeam",
+    "name": "Clube Atlético Mineiro",
+    "url": "https://atletico.com.br",
+    "logo": "https://atletico.com.br/wp-content/uploads/2022/01/atletico.svg"
+  },
+  "inLanguage": "pt-BR"
+}
+</script>
+
+<style>
+/* ============================================================
+   DESIGN TOKENS — Atlético Brand
+   ============================================================ */
+:root {
+  --gold:       #FFCB00;
+  --gold-deep:  #B8901A;
+  --ink:        #101010;
+  --charcoal:   #1B1B1B;
+  --smoke:      #F5F4F0;
+  --gray:       #6E6E6E;
+  --white:      #ffffff;
+  --panel-shadow: 0 6px 24px rgba(0,0,0,.10);
+  --radius: 16px;
+  --nav-h: 68px;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--smoke);
+  color: var(--ink);
+  padding-top: var(--nav-h);
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { -webkit-tap-highlight-color: transparent; }
+
+/* ============================================================
+   TYPOGRAPHY HELPERS
+   ============================================================ */
+.eyebrow {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: .28em;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.eyebrow--light { color: var(--gold); }
+
+.section-title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+.section-body {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #2b2b2b;
+  max-width: 720px;
+}
+.section-body--light { color: rgba(255,255,255,.85); }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section-pad { padding: 80px 0; }
+.section-pad--sm { padding: 56px 0; }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--ink);
+  border-bottom: 2px solid var(--gold);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.navbar__shield { width: 34px; height: auto; }
+.navbar__divider {
+  width: 1px; height: 32px;
+  background: rgba(255,255,255,.25);
+  flex-shrink: 0;
+}
+.navbar__logo-etico { height: 28px; width: auto; }
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.navbar__links::-webkit-scrollbar { display: none; }
+.navbar__link {
+  color: rgba(255,255,255,.75);
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: color .2s, background .2s;
+  text-decoration: none;
+}
+.navbar__link:hover { color: var(--gold); background: rgba(255,203,0,.08); }
+.navbar__link--cta {
+  color: var(--gold);
+  border: 1.5px solid var(--gold);
+  padding: 5px 12px;
+}
+.navbar__link--cta:hover { background: var(--gold); color: var(--ink); }
+.navbar__link--back {
+  color: rgba(255,255,255,.5);
+  font-size: 11px;
+  border-left: 1px solid rgba(255,255,255,.15);
+  margin-left: 6px;
+  padding-left: 14px;
+}
+.navbar__link--back:hover { color: var(--white); background: none; }
+.navbar__link--hidden { display: none; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  background: var(--ink);
+  color: var(--white);
+  padding: 96px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 90% 50%, rgba(255,203,0,.06) 0%, transparent 70%),
+    repeating-linear-gradient(
+      -45deg, transparent, transparent 40px,
+      rgba(255,203,0,.018) 40px, rgba(255,203,0,.018) 41px
+    );
+  pointer-events: none;
+}
+.hero__inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+}
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,203,0,.12);
+  border: 1px solid rgba(255,203,0,.3);
+  border-radius: 999px;
+  padding: 6px 14px 6px 10px;
+  margin-bottom: 28px;
+}
+.hero__badge-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .6; transform: scale(.8); }
+}
+.hero__badge-text {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold);
+}
+.hero__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(32px, 5.5vw, 60px);
+  font-weight: 800; text-transform: uppercase;
+  letter-spacing: .01em; line-height: 1.05;
+  margin-bottom: 24px;
+}
+.hero__title em { font-style: normal; color: var(--gold); }
+.hero__body {
+  font-size: 17px; line-height: 1.65;
+  color: rgba(255,255,255,.8);
+  max-width: 580px; margin-bottom: 36px;
+}
+.hero__cta-group { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center; gap: 8px;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700; font-size: 14px;
+  letter-spacing: .05em; text-transform: uppercase;
+  padding: 13px 24px; border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer; transition: all .2s;
+  text-decoration: none; white-space: nowrap;
+}
+.btn--primary { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.btn--primary:hover { background: transparent; color: var(--gold); }
+.btn--outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,.4); }
+.btn--outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn--outline-dark { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn--outline-dark:hover { background: var(--ink); color: var(--gold); }
+.hero__shield-wrap {
+  opacity: .07; pointer-events: none;
+}
+.hero__shield-wrap img { width: 260px; height: auto; filter: invert(1); }
+
+/* ============================================================
+   ABOUT (dark)
+   ============================================================ */
+.about { background: var(--charcoal); color: var(--white); }
+.about__grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: center;
+}
+.about__stat-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px; margin-top: 36px;
+}
+.stat-card {
+  background: rgba(255,203,0,.06);
+  border: 1px solid rgba(255,203,0,.18);
+  border-radius: 12px; padding: 20px;
+}
+.stat-card__num {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px; font-weight: 800;
+  color: var(--gold); line-height: 1; margin-bottom: 6px;
+}
+.stat-card__label { font-size: 13px; line-height: 1.4; color: rgba(255,255,255,.65); }
+.about__pillars { display: flex; flex-direction: column; gap: 16px; }
+.pillar-item {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 18px; background: rgba(255,255,255,.04);
+  border-radius: 12px; border-left: 3px solid var(--gold);
+}
+.pillar-item__icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--gold); color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.pillar-item__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; text-transform: uppercase;
+  font-size: 13px; letter-spacing: .04em;
+  color: var(--gold); margin-bottom: 4px;
+}
+.pillar-item__desc { font-size: 13.5px; color: rgba(255,255,255,.7); line-height: 1.5; }
+
+/* ============================================================
+   QUOTE BAND
+   ============================================================ */
+.quote-band {
+  background: var(--gold); color: var(--ink);
+  text-align: center; padding: 56px 24px;
+}
+.quote-band__text {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(20px, 3.5vw, 32px);
+  font-weight: 800; text-transform: uppercase;
+  letter-spacing: .01em;
+  max-width: 820px; margin: 0 auto 16px; line-height: 1.2;
+}
+.quote-band__sub {
+  font-size: 15px; opacity: .75;
+  max-width: 600px; margin: 0 auto;
+}
+
+/* ============================================================
+   CARDS GRID
+   ============================================================ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px; margin-top: 40px;
+}
+.card {
+  background: var(--white); border-radius: var(--radius);
+  padding: 28px 24px; box-shadow: var(--panel-shadow);
+  border-top: 3px solid var(--gold);
+}
+.card__icon { font-size: 28px; margin-bottom: 16px; }
+.card__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 16px;
+  text-transform: uppercase; letter-spacing: .03em; margin-bottom: 10px;
+}
+.card__body { font-size: 14px; line-height: 1.6; color: var(--gray); }
+
+/* ============================================================
+   GOVERNANCE
+   ============================================================ */
+.gov-section { background: var(--white); }
+.gov-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px; margin-top: 48px; align-items: start;
+}
+.gov-panel {
+  background: var(--smoke); border-radius: var(--radius); padding: 32px;
+}
+.gov-panel__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 18px;
+  text-transform: uppercase; letter-spacing: .03em;
+  margin-bottom: 18px; padding-bottom: 14px;
+  border-bottom: 2px solid var(--gold);
+}
+.gov-list {
+  list-style: none; display: flex; flex-direction: column; gap: 12px;
+}
+.gov-list li {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 14.5px; line-height: 1.5;
+}
+.gov-list li::before {
+  content: ''; flex-shrink: 0;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); margin-top: 8px;
+}
+.reporte-diagram {
+  display: flex; flex-direction: column;
+  gap: 0; align-items: center; margin-top: 12px;
+}
+.reporte-node {
+  background: var(--white); border: 2px solid var(--gold);
+  border-radius: 10px; padding: 14px 20px;
+  text-align: center; width: 100%; max-width: 280px;
+}
+.reporte-node__label {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 13px;
+  text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px;
+}
+.reporte-node__sub { font-size: 12px; color: var(--gray); }
+.reporte-branch {
+  display: flex; gap: 24px; align-items: flex-end;
+  width: 100%; justify-content: center;
+}
+.reporte-branch-item {
+  display: flex; flex-direction: column;
+  align-items: center; flex: 1; max-width: 200px;
+}
+.reporte-branch-label { font-size: 11px; color: var(--gray); text-align: center; margin-top: 6px; font-style: italic; }
+.reporte-branch-line { width: 2px; height: 16px; background: var(--gold); margin-top: 10px; }
+.reporte-connector {
+  display: flex; flex-direction: column;
+  align-items: center; margin: 2px 0 8px;
+}
+.reporte-line { width: 2px; height: 22px; background: var(--gold); }
+.reporte-arrowhead {
+  width: 0; height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 11px solid var(--gold);
+}
+.reporte-arrow-label {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 10px; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--gold-deep);
+  margin: 6px 0 2px;
+}
+
+/* ============================================================
+   ATRIBUIÇÕES
+   ============================================================ */
+.atrib-section { background: var(--smoke); }
+.atrib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px; margin-top: 36px;
+}
+.atrib-item {
+  background: var(--white); border-radius: 12px;
+  padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.atrib-item__num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--ink); color: var(--gold);
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.atrib-item__text { font-size: 14px; line-height: 1.55; color: #2b2b2b; }
+
+/* ============================================================
+   COMITÊ / TWO-COL
+   ============================================================ */
+.comite-section { background: var(--white); }
+.two-col {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; margin-top: 40px;
+}
+.info-block__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 20px;
+  text-transform: uppercase; letter-spacing: .02em;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 2px solid var(--gold);
+}
+.info-block__body { font-size: 15px; line-height: 1.65; color: #2b2b2b; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.tag {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700; font-size: 12px;
+  letter-spacing: .04em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 999px;
+  background: var(--smoke); border: 1.5px solid #ddd; color: var(--ink);
+}
+
+/* ============================================================
+   RESPONSABILIDADES (dark)
+   ============================================================ */
+.resp-section { background: var(--ink); color: var(--white); }
+.resp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; margin-top: 40px;
+}
+.resp-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,203,0,.2);
+  border-radius: 12px; padding: 24px 20px;
+}
+.resp-card__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 15px;
+  text-transform: uppercase; letter-spacing: .04em;
+  color: var(--gold); margin-bottom: 10px;
+}
+.resp-card__body { font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,.7); }
+
+/* ============================================================
+   INTERACTIVE SECTION
+   ============================================================ */
+.interactive-section { background: var(--smoke); padding: 80px 0; }
+.interactive-section__header { text-align: center; margin-bottom: 40px; }
+
+/* ============================================================
+   POLÍTICAS
+   ============================================================ */
+.politicas-section { background: var(--white); }
+.politicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px; margin-top: 36px;
+}
+.politica-card {
+  border: 1.5px solid #e0ddd5; border-radius: var(--radius);
+  padding: 28px 22px; display: flex; flex-direction: column; gap: 14px;
+}
+.politica-card__icon { font-size: 28px; }
+.politica-card__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 16px;
+  text-transform: uppercase; letter-spacing: .02em;
+}
+.politica-card__desc { font-size: 14px; line-height: 1.55; color: var(--gray); flex: 1; }
+.politica-card__link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700; font-size: 13px;
+  text-transform: uppercase; letter-spacing: .04em;
+  color: var(--gold-deep); text-decoration: none;
+}
+.politica-card__link:hover { color: var(--ink); text-decoration: underline; }
+.badge-soon {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 999px;
+  background: var(--smoke); color: var(--gray); border: 1px solid #ddd;
+}
+
+/* ============================================================
+   CULTURA / TREINAMENTOS
+   ============================================================ */
+.cultura-section { background: var(--smoke); }
+.cultura-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: start; margin-top: 40px;
+}
+.training-list { display: flex; flex-direction: column; gap: 16px; }
+.training-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.training-item {
+  background: var(--white); border-radius: 12px;
+  padding: 20px; display: flex; gap: 16px; align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.training-item--compact { flex-direction: column; gap: 12px; }
+.training-item__icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--gold); color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.training-item__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 15px;
+  text-transform: uppercase; letter-spacing: .02em; margin-bottom: 6px;
+}
+.training-item__body { font-size: 14px; line-height: 1.55; color: var(--gray); }
+.cultura-quote {
+  background: var(--ink); color: var(--white);
+  border-radius: var(--radius); padding: 36px 32px;
+}
+.cultura-quote__text {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 22px; font-weight: 800;
+  text-transform: uppercase; line-height: 1.25;
+  color: var(--gold); margin-bottom: 16px;
+}
+.cultura-quote__sub { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.75); }
+
+/* ============================================================
+   TERCEIROS
+   ============================================================ */
+.terceiros-section { background: var(--white); }
+.terceiros-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: start; margin-top: 40px;
+}
+.stat-big {
+  text-align: center; padding: 32px;
+  background: var(--ink); border-radius: var(--radius);
+  color: var(--white); margin-bottom: 20px;
+}
+.stat-big__num {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 72px; font-weight: 800;
+  color: var(--gold); line-height: 1; margin-bottom: 8px;
+}
+.stat-big__label { font-size: 15px; color: rgba(255,255,255,.75); line-height: 1.4; }
+.criteria-list { display: flex; flex-direction: column; gap: 10px; }
+.criteria-item {
+  display: flex; gap: 12px; align-items: center;
+  font-size: 14px; padding: 10px 14px;
+  background: var(--smoke); border-radius: 8px;
+}
+.criteria-item__badge {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700; font-size: 11px; letter-spacing: .04em;
+  background: var(--ink); color: var(--gold);
+  padding: 3px 8px; border-radius: 4px; flex-shrink: 0;
+}
+
+/* ============================================================
+   ESG
+   ============================================================ */
+.esg-section { background: var(--charcoal); color: var(--white); }
+.esg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; margin-top: 40px;
+}
+.esg-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,203,0,.15);
+  border-radius: 12px; padding: 24px 20px;
+}
+.esg-card__num {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 36px; font-weight: 800;
+  color: var(--gold); line-height: 1; margin-bottom: 6px;
+}
+.esg-card__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 14px;
+  text-transform: uppercase; letter-spacing: .03em; margin-bottom: 10px;
+}
+.esg-card__body { font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,.65); }
+
+/* ============================================================
+   RESULTADOS (placeholder)
+   ============================================================ */
+.resultados-section { background: var(--smoke); }
+.resultados-placeholder {
+  text-align: center; padding: 80px 24px;
+  max-width: 560px; margin: 0 auto;
+}
+.resultados-placeholder__icon { font-size: 48px; margin-bottom: 20px; }
+.resultados-placeholder__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px; font-weight: 800;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.resultados-placeholder__body { font-size: 15px; color: var(--gray); line-height: 1.6; }
+
+/* ============================================================
+   CANAL ÉTICO CTA
+   ============================================================ */
+.canal-section {
+  background: var(--ink); color: var(--white); text-align: center;
+}
+.canal-section__inner {
+  max-width: 680px; margin: 0 auto; padding: 96px 24px;
+}
+.canal-section__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800; text-transform: uppercase;
+  letter-spacing: .01em; line-height: 1.1; margin-bottom: 20px;
+}
+.canal-section__title em { font-style: normal; color: var(--gold); }
+.canal-section__body {
+  font-size: 16px; line-height: 1.65;
+  color: rgba(255,255,255,.75); margin-bottom: 36px;
+}
+.canal-section__guarant {
+  display: flex; justify-content: center;
+  gap: 28px; flex-wrap: wrap; margin-top: 36px;
+}
+.guarant-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: rgba(255,255,255,.6);
+}
+.guarant-item::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: #0a0a0a; color: rgba(255,255,255,.5);
+  padding: 36px 0; border-top: 1px solid rgba(255,203,0,.15);
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-brand { display: flex; align-items: center; gap: 12px; }
+.footer-shield { width: 28px; height: auto; }
+.footer-logo-etico { height: 22px; width: auto; }
+.footer-links { display: flex; gap: 20px; font-size: 12px; }
+.footer-links a { color: rgba(255,255,255,.45); text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: var(--gold); }
+.footer-copy { font-size: 12px; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__shield-wrap { display: none; }
+  .about__grid { grid-template-columns: 1fr; gap: 36px; }
+  .two-col { grid-template-columns: 1fr; }
+  .cultura-grid { grid-template-columns: 1fr; }
+  .terceiros-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .navbar__links { gap: 0; }
+  .navbar__link { font-size: 11px; padding: 5px 7px; }
+  .about__stat-row { grid-template-columns: 1fr 1fr; }
+  .section-pad { padding: 56px 0; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .training-row { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .navbar__link--back { display: none; }
+  .hero__cta-group { flex-direction: column; }
+  .btn { width: 100%; justify-content: center; }
+}
+
+/* ============================================================
+   INTERACTIVE EMBED — scoped to .escalacao-embed
+   CSS from "Desenho Interativo - Programa Ético.html"
+   .wrap renamed .ei-wrap · body{} removed · header removed
+   ============================================================ */
+.escalacao-embed { font-family: Arial, Helvetica, sans-serif; }
+.escalacao-embed * { box-sizing: border-box; }
+.escalacao-embed button { -webkit-tap-highlight-color: transparent; }
+.escalacao-embed .ei-wrap { max-width: 1240px; margin: 0 auto; }
+
+.escalacao-embed .frame {
+  background: var(--white); border: 2px solid var(--gold);
+  border-radius: 18px; padding: 22px 22px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12); position: relative;
+}
+.escalacao-embed .frame::before {
+  content: ""; position: absolute; inset: 8px;
+  border: 1px solid var(--gold); border-radius: 12px; pointer-events: none;
+}
+.escalacao-embed .thirds-header {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px; padding: 6px 14px 16px; position: relative; z-index: 2;
+}
+.escalacao-embed .third-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; text-transform: uppercase; letter-spacing: .02em;
+  font-size: clamp(12px,1.6vw,17px); padding: 8px 4px; border-radius: 8px;
+  color: var(--ink); transition: background .2s, opacity .2s, color .2s;
+}
+.escalacao-embed .third-btn:nth-child(2) { justify-self: center; }
+.escalacao-embed .third-btn:nth-child(3) { justify-self: end; }
+.escalacao-embed .third-btn:nth-child(1) { justify-self: start; }
+.escalacao-embed .third-btn.active { background: var(--ink); color: var(--gold); }
+.escalacao-embed .third-btn.dim { opacity: .35; }
+
+.escalacao-embed .scroll-hint { display: none; color: var(--gray); font-size: 12px; text-align: center; margin: 0 0 10px; letter-spacing: .02em; }
+.escalacao-embed .pitch-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.escalacao-embed .pitch-inner { min-width: 720px; }
+
+.escalacao-embed .field-wrap {
+  position: relative; width: 100%; aspect-ratio: 1601/1140;
+  border-radius: 10px; overflow: hidden; container-type: inline-size;
+  background: repeating-linear-gradient(90deg,#1f4f2c 0 42px,#256134 42px 84px);
+}
+.escalacao-embed .field-wrap svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.escalacao-embed .pitch-lines line,
+.escalacao-embed .pitch-lines rect,
+.escalacao-embed .pitch-lines circle,
+.escalacao-embed .pitch-lines path { stroke: rgba(255,255,255,.92); stroke-width: 5; fill: none; }
+.escalacao-embed .pitch-lines .spot { fill: rgba(255,255,255,.92); stroke: none; }
+
+.escalacao-embed .conn-layer { opacity: 0; pointer-events: none; transition: opacity .35s; }
+.escalacao-embed .conn-layer.show { opacity: 1; pointer-events: auto; }
+.escalacao-embed .conn-line { stroke: var(--gold); stroke-width: 4; fill: none; stroke-dasharray: 0; transition: stroke .2s, stroke-width .2s, opacity .2s; cursor: pointer; }
+.escalacao-embed .conn-line.dim { opacity: .18; }
+.escalacao-embed .conn-line.hot { stroke: var(--ink); stroke-width: 6; }
+.escalacao-embed .conn-badge { cursor: pointer; }
+.escalacao-embed .conn-badge circle { fill: var(--ink); stroke: var(--gold); stroke-width: 2.5; }
+.escalacao-embed .conn-badge text { fill: var(--gold); font-family: Arial,sans-serif; font-weight: 800; font-size: 22px; text-anchor: middle; dominant-baseline: central; }
+.escalacao-embed .conn-badge.dim { opacity: .25; }
+
+.escalacao-embed .area-ring { fill: none; stroke: var(--gold); stroke-width: 4; stroke-dasharray: 6 8; opacity: 0; transform-origin: center; transition: opacity .3s; }
+.escalacao-embed .area-ring.show { opacity: 1; animation: ei-spin 14s linear infinite; }
+@keyframes ei-spin { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+
+.escalacao-embed .node {
+  position: absolute; transform: translate(-50%,-50%);
+  width: 9%; aspect-ratio: 1/1; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  cursor: pointer; padding: 4%;
+  background: radial-gradient(circle at 35% 30%, #333 0%, #0c0c0c 70%);
+  border: 3px solid var(--gold); color: var(--white);
+  font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 800;
+  font-size: clamp(9px,2.3cqw,12px); line-height: 1.14;
+  letter-spacing: .01em; text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0,0,0,.35);
+  transition: transform .2s, box-shadow .2s, opacity .25s, filter .25s;
+  z-index: 3;
+}
+.escalacao-embed .node:hover { transform: translate(-50%,-50%) scale(1.08); }
+.escalacao-embed .node.captain {
+  background: radial-gradient(circle at 35% 30%, #FFE067 0%, var(--gold) 70%);
+  color: var(--ink);
+  box-shadow: 0 0 0 4px rgba(255,203,0,.25), 0 4px 14px rgba(0,0,0,.35);
+}
+.escalacao-embed .node.selected { transform: translate(-50%,-50%) scale(1.14); box-shadow: 0 0 0 5px rgba(255,203,0,.5),0 6px 16px rgba(0,0,0,.4); }
+.escalacao-embed .node.dim { opacity: .28; filter: grayscale(.3); }
+.escalacao-embed .node .cap-star { position: absolute; top: -9px; right: -2px; font-size: 14px; }
+
+.escalacao-embed .footer-strip {
+  display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: space-between;
+  padding: 16px 14px 18px; font-size: 13px; position: relative; z-index: 2;
+}
+.escalacao-embed .footer-strip b { font-weight: 800; }
+
+.escalacao-embed .controls { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0 10px; }
+.escalacao-embed .ctrl-btn {
+  font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 700;
+  letter-spacing: .02em; text-transform: uppercase; font-size: 13px;
+  padding: 10px 18px; border-radius: 999px; border: 2px solid var(--ink);
+  background: var(--white); color: var(--ink); cursor: pointer; transition: all .2s;
+}
+.escalacao-embed .ctrl-btn:hover { background: var(--ink); color: var(--gold); }
+.escalacao-embed .ctrl-btn.on { background: var(--ink); color: var(--gold); }
+
+.escalacao-embed .lower-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 18px; margin-top: 18px; }
+@media (max-width:820px){ .escalacao-embed .lower-grid { grid-template-columns: 1fr; } }
+
+.escalacao-embed .panel {
+  background: var(--white); border: 1.5px solid #e6e3da; border-radius: 14px;
+  padding: 18px 20px; box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+.escalacao-embed .panel h2 {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  margin: 0 0 12px; display: flex; align-items: center; gap: 8px;
+}
+.escalacao-embed .panel h2 .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); display: inline-block; }
+
+.escalacao-embed .legend-list { list-style: none; margin: 0; padding: 0; font-size: 14px; line-height: 1.55; }
+.escalacao-embed .legend-list li { padding: 8px 0; border-bottom: 1px solid #f0eee6; }
+.escalacao-embed .legend-list li:last-child { border-bottom: none; }
+.escalacao-embed .legend-list b { display: inline-block; min-width: 170px; color: var(--ink); }
+.escalacao-embed .legend-swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+.escalacao-embed .sw-prevencao { background: #0c0c0c; border: 2px solid var(--gold); }
+.escalacao-embed .sw-reforco   { background: #0c0c0c; border: 2px solid var(--gold); }
+.escalacao-embed .sw-resposta  { background: #0c0c0c; border: 2px solid var(--gold); }
+.escalacao-embed .sw-capitao   { background: var(--gold); }
+.escalacao-embed .sw-tecnico   { background: var(--white); border: 2px solid var(--ink); }
+.escalacao-embed .sw-conexao   { background: var(--white); border: 2px dashed #B8901A; }
+
+.escalacao-embed .info-body { min-height: 170px; }
+.escalacao-embed .info-placeholder { color: var(--gray); font-size: 14px; line-height: 1.6; }
+.escalacao-embed .info-title { font-size: 19px; font-weight: 800; margin: 0 0 4px; font-family: 'Arial Narrow',Arial,sans-serif; text-transform: uppercase; }
+.escalacao-embed .info-pillar-tag {
+  display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .06em;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 999px;
+  background: var(--ink); color: var(--gold); margin-bottom: 10px;
+}
+.escalacao-embed .info-desc { font-size: 15px; line-height: 1.6; color: #2b2b2b; }
+
+.escalacao-embed .conn-list { list-style: none; margin: 10px 0 0; padding: 0; font-size: 13.5px; }
+.escalacao-embed .conn-list li { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid #f0eee6; cursor: pointer; transition: opacity .2s; }
+.escalacao-embed .conn-list li:hover { opacity: .65; }
+.escalacao-embed .conn-list li:last-child { border-bottom: none; }
+.escalacao-embed .conn-num { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: var(--gold); font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+.escalacao-embed .conn-text b { display: block; font-size: 13.5px; }
+.escalacao-embed .conn-text span { color: var(--gray); font-size: 12.5px; }
+.escalacao-embed .hidden { display: none; }
+
+.escalacao-embed .callout {
+  position: absolute; z-index: 8; width: 230px; max-width: 58%;
+  background: var(--white); border: 2px solid var(--gold); border-radius: 12px;
+  padding: 14px 16px 14px; box-shadow: 0 12px 28px rgba(0,0,0,.4);
+  opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease;
+}
+.escalacao-embed .callout.show { opacity: 1; pointer-events: auto; }
+.escalacao-embed .callout-close {
+  position: absolute; top: 5px; right: 8px; border: none; background: none;
+  font-size: 17px; line-height: 1; cursor: pointer; color: var(--gray); padding: 4px;
+}
+.escalacao-embed .callout-close:hover { color: var(--ink); }
+.escalacao-embed .callout-tag {
+  display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .05em;
+  text-transform: uppercase; background: var(--ink); color: var(--gold);
+  padding: 3px 9px; border-radius: 999px; margin-bottom: 7px;
+}
+.escalacao-embed .callout-title {
+  font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 800;
+  text-transform: uppercase; font-size: 14px; margin: 0 0 6px; padding-right: 14px;
+}
+.escalacao-embed .callout-desc { font-size: 12.5px; line-height: 1.48; color: #2b2b2b; }
+
+@media (max-width: 820px) {
+  .escalacao-embed .scroll-hint { display: block; }
+}
+@media (max-width: 700px) {
+  .escalacao-embed .frame { padding: 16px 12px 0; border-radius: 14px; }
+  .escalacao-embed .frame::before { inset: 6px; border-radius: 9px; }
+  .escalacao-embed .thirds-header { padding: 4px 6px 12px; gap: 4px; }
+  .escalacao-embed .controls { gap: 8px; }
+  .escalacao-embed .ctrl-btn { padding: 9px 14px; font-size: 12px; }
+  .escalacao-embed .lower-grid { gap: 12px; }
+  .escalacao-embed .panel { padding: 14px 16px; }
+  .escalacao-embed .callout {
+    position: fixed !important;
+    left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important;
+    width: 100% !important; max-width: 100% !important;
+    transform: translateY(115%) !important;
+    border-radius: 18px 18px 0 0; border-width: 2px 0 0 0;
+    max-height: 52vh; overflow-y: auto;
+    padding: 18px 20px 22px;
+    box-shadow: 0 -12px 30px rgba(0,0,0,.35); z-index: 20;
+  }
+  .escalacao-embed .callout.show { transform: translateY(0) !important; }
+  .escalacao-embed .callout-title { font-size: 16px; }
+  .escalacao-embed .callout-desc { font-size: 13.5px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar" aria-label="Navegação principal">
+  <div class="navbar__inner">
+    <a class="navbar__brand" href="#programa" aria-label="Programa ÉTICO — Clube Atlético Mineiro">
+      <img class="navbar__shield"
+           src="./assets/escudo-atletico-borda-branca.png"
+           alt="Escudo do Clube Atlético Mineiro">
+      <span class="navbar__divider" aria-hidden="true"></span>
+      <img class="navbar__logo-etico"
+           src="./assets/etico-logo-fundo-preto.png"
+           alt="Programa ÉTICO">
+    </a>
+    <div class="navbar__links">
+      <a class="navbar__link" href="#programa">Programa</a>
+      <a class="navbar__link" href="#estrutura">Escalação</a>
+      <a class="navbar__link" href="#governanca">Governança</a>
+      <a class="navbar__link" href="#politicas">Políticas</a>
+      <a class="navbar__link" href="#cultura">Cultura</a>
+      <a class="navbar__link" href="#terceiros">Terceiros</a>
+      <a class="navbar__link" href="#esg">ESG</a>
+      <a class="navbar__link navbar__link--hidden" href="#resultados">Resultados</a>
+      <a class="navbar__link navbar__link--cta" href="https://canaletico.atletico.com.br" target="_blank" rel="noopener">Canal Ético</a>
+      <a class="navbar__link navbar__link--back" href="https://atletico.com.br" target="_blank" rel="noopener">← Voltar ao site do Galo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     SEÇÃO 1 · HERO
+     ============================================================ -->
+<section id="programa" aria-label="Apresentação do Programa ÉTICO">
+  <div class="hero">
+    <div class="hero__inner">
+      <div>
+        <div class="hero__badge">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          <span class="hero__badge-text">Programa de Integridade · Clube Atlético Mineiro</span>
+        </div>
+        <h1 class="hero__title">
+          Integridade faz parte<br>
+          <em>do nosso jogo</em>
+        </h1>
+        <p class="hero__body">
+          O Clube Atlético Mineiro é uma instituição nacional, com história, torcida e responsabilidade. O Programa ÉTICO traduz esse compromisso em ação: estruturas, processos e cultura que protegem o Galo dentro e fora de campo.
+        </p>
+        <div class="hero__cta-group">
+          <a class="btn btn--primary" href="#estrutura">Conheça a estrutura</a>
+          <a class="btn btn--outline" href="https://canaletico.atletico.com.br" target="_blank" rel="noopener">Acessar Canal Ético</a>
+        </div>
+      </div>
+      <div class="hero__shield-wrap" aria-hidden="true">
+        <img src="./assets/escudo-atletico.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 2 · SOBRE -->
+  <div class="about section-pad">
+    <div class="container">
+      <div class="about__grid">
+        <div>
+          <p class="eyebrow eyebrow--light">Sobre o programa</p>
+          <h2 class="section-title" style="color:var(--white);">Um programa feito para proteger o Galo</h2>
+          <p class="section-body section-body--light">
+            O Programa ÉTICO é o conjunto de estruturas, políticas, processos e práticas que o Atlético adota para prevenir, identificar e responder a situações de risco à integridade do Clube. Mais do que uma exigência, é um compromisso com o Clube, com os torcedores e com o futebol brasileiro.
+          </p>
+          <div class="about__stat-row">
+            <div class="stat-card">
+              <div class="stat-card__num">11</div>
+              <div class="stat-card__label">capacidades integradas no programa</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__num">700+</div>
+              <div class="stat-card__label">terceiros analisados por ano</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__num">3</div>
+              <div class="stat-card__label">pilares de atuação do programa</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__num">300+</div>
+              <div class="stat-card__label">ações realizadas a partir de apurações</div>
+            </div>
+          </div>
+        </div>
+        <div class="about__pillars">
+          <div class="pillar-item">
+            <div class="pillar-item__icon">🛡</div>
+            <div>
+              <div class="pillar-item__title">Prevenção</div>
+              <div class="pillar-item__desc">Políticas, educação e cultura ética que atuam antes da ocorrência do desvio, fortalecendo o ambiente de integridade.</div>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-item__icon">⚙️</div>
+            <div>
+              <div class="pillar-item__title">Reforço</div>
+              <div class="pillar-item__desc">Gestão de riscos, controles internos e a área responsável que sustenta, articula e impulsiona o programa continuamente.</div>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-item__icon">🔍</div>
+            <div>
+              <div class="pillar-item__title">Identificação e Resposta</div>
+              <div class="pillar-item__desc">Canal Ético, devida diligência, investigações e monitoramento que detectam, apuram e corrigem situações de risco.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 3 · QUOTE -->
+  <div class="quote-band">
+    <p class="eyebrow" style="color:rgba(0,0,0,.5);margin-bottom:12px;">Princípio do programa</p>
+    <p class="quote-band__text">A integridade é responsabilidade de todos</p>
+    <p class="quote-band__sub">Do atleta ao dirigente, do fornecedor ao parceiro, cada pessoa que se relaciona com o Atlético tem papel ativo na construção de um ambiente ético e íntegro.</p>
+  </div>
+
+  <!-- SEÇÃO 4 · ÉTICA E DESEMPENHO -->
+  <div class="section-pad" style="background:var(--white);">
+    <div class="container">
+      <p class="eyebrow">Visão integrada</p>
+      <h2 class="section-title">Ética, governança e desempenho caminham juntos</h2>
+      <p class="section-body" style="margin-bottom:32px;">
+        Integridade não é contrária ao desempenho, é uma condição essencial para ele. Acreditamos que clubes que operam com transparência, controles sólidos e governança efetiva estão mais bem preparados para crescer de forma sustentável, atrair parceiros e manter a confiança de torcedores, atletas e investidores.
+      </p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__icon">🏆</div>
+          <div class="card__title">Confiança</div>
+          <div class="card__body">Relações baseadas em transparência com parceiros, patrocinadores e fornecedores fortalecem o ecossistema do Clube.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon">📋</div>
+          <div class="card__title">Conformidade</div>
+          <div class="card__body">Políticas claras e processos auditáveis reduzem riscos regulatórios e protegem a reputação do Atlético no mercado.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon">📈</div>
+          <div class="card__title">Sustentabilidade</div>
+          <div class="card__body">Governança sólida cria as bases para o crescimento de longo prazo, atraindo investimentos e permitindo operações mais eficientes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 5 · INTERACTIVE EMBED -->
+  <div id="estrutura" class="interactive-section">
+    <div class="container">
+      <div class="interactive-section__header">
+        <p class="eyebrow">Estrutura do programa</p>
+        <h2 class="section-title">Conheça a escalação da integridade</h2>
+        <p class="section-body" style="margin:0 auto 8px;text-align:center;max-width:680px;">
+          Assim como uma equipe em campo, o Programa ÉTICO organiza suas capacidades em três terços: prevenção, reforço e identificação &amp; resposta. Clique nas posições para conhecer cada função e nas conexões para ver como elas jogam juntas.
+        </p>
+      </div>
+
+      <div class="escalacao-embed">
+        <div class="ei-wrap">
+          <div class="frame">
+            <p class="scroll-hint">↔ arraste para o lado para ver o campo completo</p>
+            <div class="pitch-scroll">
+            <div class="pitch-inner">
+            <div class="thirds-header">
+              <button class="third-btn" data-pillar="resposta">Identificação e Resposta</button>
+              <button class="third-btn" data-pillar="reforco">Reforço</button>
+              <button class="third-btn" data-pillar="prevencao">Prevenção</button>
+            </div>
+            <div class="field-wrap" id="fieldWrap">
+              <svg class="pitch-lines" viewBox="0 0 1601 1140" preserveAspectRatio="none">
+                <rect x="40" y="40" width="1521" height="1060"></rect>
+                <line x1="800" y1="40" x2="800" y2="1100"></line>
+                <circle cx="800" cy="570" r="130"></circle>
+                <circle class="spot" cx="800" cy="570" r="7"></circle>
+                <rect x="40" y="330" width="300" height="480"></rect>
+                <rect x="40" y="430" width="95" height="280"></rect>
+                <rect x="8" y="490" width="32" height="160"></rect>
+                <rect x="1261" y="330" width="300" height="480"></rect>
+                <rect x="1466" y="430" width="95" height="280"></rect>
+                <rect x="1561" y="490" width="32" height="160"></rect>
+                <path d="M40,110 A70,70 0 0,1 110,40"></path>
+                <path d="M1491,40 A70,70 0 0,1 1561,110"></path>
+                <path d="M1561,1030 A70,70 0 0,1 1491,1100"></path>
+                <path d="M110,1100 A70,70 0 0,1 40,1030"></path>
+              </svg>
+              <svg class="conn-layer" id="connLayer" viewBox="0 0 1601 1140" preserveAspectRatio="none">
+                <defs>
+                  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M0,0 L10,5 L0,10 z" fill="#101010"></path>
+                  </marker>
+                </defs>
+                <circle class="area-ring" id="areaRing" cx="993" cy="570" r="95"></circle>
+                <g id="connLines"></g>
+                <g id="connBadges"></g>
+              </svg>
+              <div id="nodesLayer"></div>
+              <div class="callout" id="callout">
+                <button class="callout-close" id="calloutClose" aria-label="Fechar">×</button>
+                <div class="callout-tag" id="calloutTag"></div>
+                <div class="callout-title" id="calloutTitle"></div>
+                <div class="callout-desc" id="calloutDesc"></div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="footer-strip">
+              <span><b>Técnico – Conselho de Administração:</b> Patrocínio · Diretrizes · Recursos · Exemplo</span>
+              <span><b>Capitão:</b> Cultura e Liderança Ética</span>
+            </div>
+          </div>
+          <div class="controls">
+            <button class="ctrl-btn" id="btnAll">Ver time completo</button>
+            <button class="ctrl-btn" id="btnConn">Mostrar conexões</button>
+            <button class="ctrl-btn" id="btnFull">Tela cheia</button>
+          </div>
+          <div class="lower-grid">
+            <div class="panel">
+              <h2><span class="dot"></span>Como ler este campo</h2>
+              <ul class="legend-list">
+                <li><span class="legend-swatch sw-prevencao"></span><b>Prevenção</b>estruturas que atuam antes da ocorrência do desvio.</li>
+                <li><span class="legend-swatch sw-reforco"></span><b>Reforço</b>estruturas que sustentam, articulam e fortalecem o programa.</li>
+                <li><span class="legend-swatch sw-resposta"></span><b>Identificação e Resposta</b>estruturas que detectam, apuram, tratam e corrigem situações de risco ou irregularidade.</li>
+                <li><span class="legend-swatch sw-capitao"></span><b>Capitão</b>símbolo da Cultura e Liderança Ética.</li>
+                <li><span class="legend-swatch sw-tecnico"></span><b>Técnico</b>símbolo do apoio da Alta Administração.</li>
+                <li><span class="legend-swatch sw-conexao"></span><b>Linhas de conexão</b>relações de coordenação, suporte e retroalimentação entre as capacidades do programa.</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h2><span class="dot"></span>Posição selecionada</h2>
+              <div class="info-body" id="infoBody">
+                <p class="info-placeholder">Clique em uma posição do campo (ou em uma conexão, quando ativada) para ver a descrição aqui.</p>
+              </div>
+              <ul class="conn-list hidden" id="connList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GOVERNANÇA
+     ============================================================ -->
+<section id="governanca" aria-label="Governança do Programa ÉTICO">
+
+  <div class="gov-section section-pad">
+    <div class="container">
+      <p class="eyebrow">Governança</p>
+      <h2 class="section-title">Governança do Programa ÉTICO</h2>
+      <p class="section-body" style="margin-bottom:48px;">
+        A governança do Programa ÉTICO define quem é responsável pelo quê, como as decisões são tomadas e de que forma o tema de integridade é reportado e supervisionado dentro do Clube.
+      </p>
+      <div class="gov-grid">
+        <div class="gov-panel">
+          <div class="gov-panel__title">Duplo Reporte do Departamento de Compliance</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--gray);margin-bottom:20px;">
+            O Departamento de Compliance e Integridade Corporativa possui duplo reporte: responde ao CEO pelas atividades do dia a dia e ao Conselho de Administração para assuntos de integridade e conformidade, garantindo independência e acesso direto à Alta Gestão.
+          </p>
+          <div class="reporte-diagram">
+            <div class="reporte-branch">
+              <div class="reporte-branch-item">
+                <div class="reporte-node" style="max-width:160px;">
+                  <div class="reporte-node__label" style="font-size:12px;">CEO</div>
+                  <div class="reporte-node__sub">Linha de Negócios</div>
+                </div>
+                <div class="reporte-branch-label">Atividades do dia a dia</div>
+                <div class="reporte-branch-line"></div>
+              </div>
+              <div class="reporte-branch-item">
+                <div class="reporte-node" style="max-width:160px;">
+                  <div class="reporte-node__label" style="font-size:11px;">Conselho de Administração</div>
+                  <div class="reporte-node__sub">Linha de Compliance</div>
+                </div>
+                <div class="reporte-branch-label">Integridade e conformidade</div>
+                <div class="reporte-branch-line"></div>
+              </div>
+            </div>
+            <div class="reporte-connector">
+              <div class="reporte-arrow-label">reporta-se a</div>
+              <div class="reporte-arrowhead"></div>
+              <div class="reporte-line"></div>
+            </div>
+            <div class="reporte-node" style="background:var(--ink);color:var(--white);border-color:var(--gold);max-width:260px;">
+              <div class="reporte-node__label" style="color:var(--white);">Departamento de Compliance</div>
+              <div class="reporte-node__sub" style="color:rgba(255,255,255,.6);">e Integridade Corporativa</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gov-panel">
+          <div class="gov-panel__title">Comitê de Integridade</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--gray);margin-bottom:16px;">
+            O Comitê de Integridade é instância colegiada que apoia a tomada de decisão em relação as apurações corporativas conduzidas no escopo do Programa ÉTICO.
+          </p>
+          <ul class="gov-list">
+            <li>Deliberação sobre apurações</li>
+            <li>Acompanhamento de indicadores de integridade</li>
+            <li>Canal de reporte independente para o Conselho de Administração</li>
+          </ul>
+        </div>
+
+        <div class="gov-panel">
+          <div class="gov-panel__title">Conselho de Administração</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--gray);margin-bottom:16px;">
+            O Conselho de Administração é o órgão de governança responsável por assegurar o funcionamento do Programa ÉTICO, disponibilizando autoridade e recursos para o Departamento de Compliance.
+          </p>
+          <ul class="gov-list">
+            <li>Deliberação sobre apurações que envolvam membros da Alta Gestão</li>
+            <li>Acompanhamento de indicadores de integridade</li>
+            <li>Aprovação das políticas do Programa ÉTICO</li>
+            <li>Aprovação das métricas de gestão de riscos e controles internos</li>
+            <li>Acompanhamento dos relatórios de auditoria interna</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="atrib-section section-pad">
+    <div class="container">
+      <p class="eyebrow">Estrutura operacional</p>
+      <h2 class="section-title">Departamento de Compliance<br>e Integridade Corporativa</h2>
+      <p class="section-body">O Departamento é responsável por coordenar, implementar e monitorar o Programa ÉTICO, atuando de forma transversal em toda a organização. Suas atribuições incluem:</p>
+      <div class="atrib-grid">
+        <div class="atrib-item"><div class="atrib-item__num">1</div><div class="atrib-item__text">Coordenar e implementar o Programa de Integridade e Compliance do Clube, garantindo sua atualização e aderência às melhores práticas.</div></div>
+        <div class="atrib-item"><div class="atrib-item__num">2</div><div class="atrib-item__text">Gerir o Canal Ético e as investigações internas, garantindo imparcialidade, sigilo e adequado encaminhamento dos relatos recebidos.</div></div>
+        <div class="atrib-item"><div class="atrib-item__num">3</div><div class="atrib-item__text">Realizar a devida diligência de terceiros, avaliando parceiros, fornecedores, patrocinadores e outros relacionamentos sensíveis antes e durante o vínculo.</div></div>
+        <div class="atrib-item"><div class="atrib-item__num">4</div><div class="atrib-item__text">Desenvolver e revisar políticas, procedimentos e normas internas relacionadas à ética, integridade e conformidade.</div></div>
+        <div class="atrib-item"><div class="atrib-item__num">5</div><div class="atrib-item__text">Promover treinamentos, comunicações e ações de engajamento para disseminar a cultura de integridade em todas as áreas do Clube.</div></div>
+        <div class="atrib-item"><div class="atrib-item__num">6</div><div class="atrib-item__text">Monitorar indicadores, processos e controles internos, identificando fragilidades e propondo medidas de aprimoramento contínuo.</div></div>
+        <div class="atrib-item"><div class="atrib-item__num">7</div><div class="atrib-item__text">Apoiar a gestão de riscos corporativos com foco nos riscos de integridade, anticorrupção e conformidade regulatória.</div></div>
+        <div class="atrib-item"><div class="atrib-item__num">8</div><div class="atrib-item__text">Reportar ao Comitê de Integridade e ao Conselho de Administração sobre o andamento do Programa ÉTICO, casos relevantes e recomendações de melhoria.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comite-section section-pad">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="info-block__title">Situações que envolvem a Alta Gestão</div>
+          <div class="info-block__body">
+            <p style="margin-bottom:16px;">Quando uma situação de risco ou irregularidade envolve diretores, conselheiros ou membros da Alta Gestão, o Departamento de Compliance aciona o Conselho de Administração para assegurar a independência na apuração e a adequada deliberação.</p>
+              <div class="tag-list">
+              <span class="tag">Independência</span>
+              <span class="tag">Imparcialidade</span>
+              <span class="tag">Reporte ao Conselho</span>
+              <span class="tag">Sigilo</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="info-block__title">Responsabilidades Compartilhadas</div>
+          <div class="info-block__body">
+            <p style="margin-bottom:16px;">A integridade não é responsabilidade exclusiva do Departamento de Compliance. Cada área, gestor e colaborador tem papel ativo na manutenção do ambiente ético do Clube.</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;gap:10px;font-size:14px;line-height:1.5;"><span style="color:var(--gold-deep);font-weight:700;">→</span>Líderes devem exemplificar os valores e cobrar conformidade em suas equipes.</li>
+              <li style="display:flex;gap:10px;font-size:14px;line-height:1.5;"><span style="color:var(--gold-deep);font-weight:700;">→</span>Colaboradores devem conhecer as políticas e reportar situações suspeitas.</li>
+              <li style="display:flex;gap:10px;font-size:14px;line-height:1.5;"><span style="color:var(--gold-deep);font-weight:700;">→</span>Parceiros e fornecedores devem respeitar o Código de Conduta para Terceiros.</li>
+              <li style="display:flex;gap:10px;font-size:14px;line-height:1.5;"><span style="color:var(--gold-deep);font-weight:700;">→</span>A Alta Gestão deve patrocinar e fortalecer continuamente o Programa ÉTICO.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="resp-section section-pad--sm">
+    <div class="container">
+      <p class="eyebrow eyebrow--light" style="text-align:center;margin-bottom:8px;">Para cada público</p>
+      <h2 class="section-title" style="color:var(--white);text-align:center;margin-bottom:40px;">O papel de cada um</h2>
+      <div class="resp-grid">
+        <div class="resp-card"><div class="resp-card__title">Conselho de Administração</div><div class="resp-card__body">Supervisão estratégica, aprovação de políticas e suporte institucional ao Programa ÉTICO.</div></div>
+        <div class="resp-card"><div class="resp-card__title">Alta Direção</div><div class="resp-card__body">Patrocínio ativo, exemplo comportamental e alocação de recursos para a operação do programa.</div></div>
+        <div class="resp-card"><div class="resp-card__title">Gestores</div><div class="resp-card__body">Liderar pelo exemplo, garantir que as políticas sejam conhecidas e cobrar conformidade nas equipes.</div></div>
+        <div class="resp-card"><div class="resp-card__title">Colaboradores</div><div class="resp-card__body">Conhecer as normas, agir com ética e reportar situações suspeitas ao Canal Ético sem medo de retaliação.</div></div>
+        <div class="resp-card"><div class="resp-card__title">Terceiros</div><div class="resp-card__body">Respeitar o Código de Conduta para Terceiros e manter padrões equivalentes de integridade em suas organizações.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     POLÍTICAS
+     ============================================================ -->
+<section id="politicas" class="politicas-section section-pad" aria-label="Políticas e Procedimentos">
+  <div class="container">
+    <p class="eyebrow">Normas e documentos</p>
+    <h2 class="section-title">Políticas e Procedimentos</h2>
+    <p class="section-body" style="margin-bottom:8px;">
+      As políticas do Programa ÉTICO traduzem as diretrizes e expectativas do Clube em orientações práticas para o dia a dia. Conheça os principais documentos normativos.
+    </p>
+    <div class="politicas-grid">
+      <div class="politica-card">
+        <div class="politica-card__icon">📄</div>
+        <div class="politica-card__title">Código de Ética</div>
+        <div class="politica-card__desc">Define os valores, princípios e comportamentos esperados de todos que se relacionam com o Clube Atlético Mineiro.</div>
+        <a class="politica-card__link" href="https://atletico.com.br/wp-content/uploads/2026/07/CODIGO-DE-ETICA-VF-07.2026.pdf" target="_blank" rel="noopener">Acessar documento →</a>
+      </div>
+      <div class="politica-card">
+        <div class="politica-card__icon">🤝</div>
+        <div class="politica-card__title">Código de Conduta para Terceiros</div>
+        <div class="politica-card__desc">Estabelece os padrões de conduta exigidos de fornecedores, parceiros e prestadores de serviço do Atlético.</div>
+        <a class="politica-card__link" href="https://atletico.com.br/wp-content/uploads/2024/09/Codigo-de-Conduta-para-Terceiros.pdf" target="_blank" rel="noopener">Acessar documento →</a>
+      </div>
+      <div class="politica-card">
+        <div class="politica-card__icon">🔒</div>
+        <div class="politica-card__title">Portal da Privacidade</div>
+        <div class="politica-card__desc">Informações sobre tratamento de dados pessoais, direitos dos titulares e políticas de privacidade do Clube, em conformidade com a LGPD.</div>
+        <a class="politica-card__link" href="https://galonaveia.atletico.com.br/portal-de-privacidade" target="_blank" rel="noopener">Acessar portal →</a>
+      </div>
+      <div class="politica-card">
+        <div class="politica-card__icon">📋</div>
+        <div class="politica-card__title">Demais Políticas Internas</div>
+        <div class="politica-card__desc">Normas de prevenção à lavagem de dinheiro, política anticorrupção, normas de controles internos e demais procedimentos do programa.</div>
+        <span class="badge-soon">Em breve</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CULTURA E TREINAMENTOS
+     ============================================================ -->
+<section id="cultura" class="cultura-section section-pad" aria-label="Cultura e Engajamento">
+  <div class="container">
+    <p class="eyebrow">Educação e engajamento</p>
+    <h2 class="section-title">Cultura e Treinamentos</h2>
+    <div class="cultura-grid">
+      <div>
+        <p class="section-body" style="margin-bottom:28px;">
+          A construção de uma cultura ética sólida passa pela capacitação contínua de todos os públicos. O Programa ÉTICO oferece iniciativas de treinamento e comunicação para garantir que todos conheçam as regras, os valores e os comportamentos esperados.
+        </p>
+        <div class="training-list">
+          <div class="training-item">
+            <div class="training-item__icon">💻</div>
+            <div>
+              <div class="training-item__title">Treinamentos Online</div>
+              <div class="training-item__body">Módulos digitais acessíveis a colaboradores e atletas, com conteúdo sobre ética, anticorrupção, proteção de dados e integridade no esporte.</div>
+            </div>
+          </div>
+          <div class="training-item">
+            <div class="training-item__icon">🎓</div>
+            <div>
+              <div class="training-item__title">Treinamentos Presenciais</div>
+              <div class="training-item__body">Workshops, palestras e capacitações presenciais com foco em temas específicos para diferentes públicos internos e externos.</div>
+            </div>
+          </div>
+          <div class="training-row">
+            <div class="training-item training-item--compact">
+              <div class="training-item__icon">📢</div>
+              <div>
+                <div class="training-item__title">Comunicações e Publicações</div>
+                <div class="training-item__body">Materiais de comunicação interna, campanhas de sensibilização e publicações institucionais para manter o tema de integridade em destaque.</div>
+              </div>
+            </div>
+            <div class="training-item training-item--compact">
+              <div class="training-item__icon">🎬</div>
+              <div>
+                <div class="training-item__title">Vídeo de Diretrizes Gerais</div>
+                <div class="training-item__body">Material audiovisual que apresenta as principais diretrizes do Programa ÉTICO de forma acessível e engajadora para todos os públicos.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cultura-quote">
+          <div class="cultura-quote__text">"A ética começa<br>no exemplo"</div>
+          <div class="cultura-quote__sub">O Programa ÉTICO acredita que a transformação cultural começa pela liderança. Quando gestores e dirigentes vivem os valores que pregam, toda a organização evolui na direção da integridade.</div>
+        </div>
+        <div style="margin-top:20px;background:var(--white);border-radius:var(--radius);padding:24px;box-shadow:var(--panel-shadow);">
+          <div style="font-family:'Arial Narrow',Arial,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:16px;">Temas abordados nos treinamentos</div>
+          <div class="tag-list">
+            <span class="tag">Ética e Integridade</span>
+            <span class="tag">Anticorrupção</span>
+            <span class="tag">Combate à Manipulação de Resultados e promoção do jogo responsável</span>
+            <span class="tag">LGPD</span>
+            <span class="tag">Canal Ético</span>
+            <span class="tag">Conflito de Interesses</span>
+            <span class="tag">Due Diligence</span>
+            <span class="tag">Lavagem de Dinheiro</span>
+            <span class="tag">Código de Ética</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TERCEIROS / DUE DILIGENCE
+     ============================================================ -->
+<section id="terceiros" class="terceiros-section section-pad" aria-label="Terceiros e Due Diligence">
+  <div class="container">
+    <p class="eyebrow">Gestão de terceiros</p>
+    <h2 class="section-title">Devida Diligência</h2>
+    <div class="terceiros-grid">
+      <div>
+        <div class="stat-big">
+          <div class="stat-big__num">700+</div>
+          <div class="stat-big__label">terceiros analisados por ano entre parceiros, fornecedores, patrocinadores e profissionais</div>
+        </div>
+        <p class="section-body" style="font-size:15px;margin-bottom:24px;">
+          O Atlético realiza a devida diligência de terceiros para identificar previamente riscos relacionados a parceiros, fornecedores, patrocinadores e outros relacionamentos sensíveis — antes e durante o vínculo com o Clube.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn btn--outline-dark" href="https://atletico.com.br/wp-content/uploads/2024/09/Codigo-de-Conduta-para-Terceiros.pdf" target="_blank" rel="noopener">Código de Conduta para Terceiros</a>
+          <a class="btn btn--outline-dark" href="https://atletico.com.br/wp-content/uploads/2026/07/CODIGO-DE-ETICA-VF-07.2026.pdf" target="_blank" rel="noopener">Código de Ética</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Arial Narrow',Arial,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--gold);">Critérios de análise</div>
+        <p style="font-size:14px;color:var(--gray);margin-bottom:16px;line-height:1.5;">A análise inclui verificação em cadastros e listas restritivas nacionais e internacionais:</p>
+        <div class="criteria-list">
+          <div class="criteria-item"><span class="criteria-item__badge">MTE</span>Lista do Trabalho Escravo (Cadastro de Empregadores)</div>
+          <div class="criteria-item"><span class="criteria-item__badge">CGU</span>CEIS — Cadastro de Empresas Inidôneas e Suspensas</div>
+          <div class="criteria-item"><span class="criteria-item__badge">CGU</span>CEPIM — Entidades sem fins lucrativos impedidas</div>
+          <div class="criteria-item"><span class="criteria-item__badge">CGU</span>CEAF — Cadastro de Expulsões da Administração Federal</div>
+          <div class="criteria-item"><span class="criteria-item__badge">CGU</span>CNEP — Cadastro Nacional de Empresas Punidas</div>
+          <div class="criteria-item"><span class="criteria-item__badge">TCU</span>Licitantes inidôneos e empresas sancionadas</div>
+          <div class="criteria-item"><span class="criteria-item__badge">CVM</span>Pessoas físicas e jurídicas sancionadas</div>
+          <div class="criteria-item"><span class="criteria-item__badge">OFAC</span>Specially Designated Nationals — SDN List</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ESG
+     ============================================================ -->
+<section id="esg" class="esg-section section-pad" aria-label="ESG e Sustentabilidade">
+  <div class="container">
+    <p class="eyebrow eyebrow--light">Sustentabilidade</p>
+    <h2 class="section-title" style="color:var(--white);">Galo Sustentável</h2>
+    <p class="section-body section-body--light" style="margin-bottom:48px;">
+      O compromisso do Atlético com a integridade vai além das relações corporativas: inclui responsabilidade ambiental e social com a cidade de Belo Horizonte, com o Brasil e com o planeta. O programa Galo Sustentável traduz esse compromisso em ações concretas.
+    </p>
+    <div class="esg-grid">
+      <div class="esg-card">
+        <div class="esg-card__num">100%</div>
+        <div class="esg-card__title">Energia Renovável</div>
+        <div class="esg-card__body">A Arena MRV opera com 100% de energia renovável, por meio de parceria com a CMU Energia e geração fotovoltaica.</div>
+      </div>
+      <div class="esg-card">
+        <div class="esg-card__num">26 mil</div>
+        <div class="esg-card__title">m² de Mata Atlântica</div>
+        <div class="esg-card__body">A Arena MRV abriga uma Reserva Particular do Patrimônio Natural Ecológica com mais de 26 mil m² de Mata Atlântica e 2 nascentes preservadas.</div>
+      </div>
+      <div class="esg-card">
+        <div class="esg-card__num">23 mil</div>
+        <div class="esg-card__title">Mudas Plantadas</div>
+        <div class="esg-card__body">Mais de 23.000 mudas plantadas em 4 parques e áreas verdes de Belo Horizonte entre 2021 e 2024.</div>
+      </div>
+      <div class="esg-card">
+        <div class="esg-card__num">3</div>
+        <div class="esg-card__title">Eixos de Gestão Ambiental</div>
+        <div class="esg-card__body">Gestão hídrica, energética e de resíduos como pilares da operação ambiental responsável do Clube.</div>
+      </div>
+    </div>
+    <div style="margin-top:36px;text-align:center;">
+      <a class="btn btn--primary" href="https://atletico.com.br/esg/" target="_blank" rel="noopener">Ver página ESG completa</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESULTADOS
+     ============================================================ -->
+<section id="resultados" class="resultados-section section-pad" aria-label="Resultados do Programa">
+  <div class="container">
+    <div class="resultados-placeholder">
+      <div class="resultados-placeholder__icon">📊</div>
+      <h2 class="resultados-placeholder__title">Resultados e Indicadores</h2>
+      <p class="resultados-placeholder__body">
+        Em breve, esta seção apresentará os indicadores e resultados do Programa ÉTICO: número de treinamentos realizados, relatos recebidos pelo Canal Ético, terceiros analisados e ações de melhoria implementadas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CANAL ÉTICO CTA
+     ============================================================ -->
+<section id="canal" class="canal-section" aria-label="Canal Ético">
+  <div class="canal-section__inner">
+    <p class="eyebrow eyebrow--light">Fale conosco</p>
+    <h2 class="canal-section__title">
+      O Canal Ético é o seu espaço para <em>proteger o Galo</em>
+    </h2>
+    <p class="canal-section__body">
+      Relate com segurança situações que possam violar o Código de Ética, as políticas do Clube ou as leis aplicáveis. O Canal Ético garante sigilo, imparcialidade e não retaliação para quem age de boa-fé.
+    </p>
+    <a class="btn btn--primary" href="https://canaletico.atletico.com.br" target="_blank" rel="noopener" style="font-size:16px;padding:16px 36px;margin:0 auto;display:inline-flex;">
+      Acessar Canal Ético
+    </a>
+    <div class="canal-section__guarant">
+      <span class="guarant-item">Sigilo garantido</span>
+      <span class="guarant-item">Relato anônimo disponível</span>
+      <span class="guarant-item">Sem retaliação</span>
+      <span class="guarant-item">Apuração independente</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" aria-label="Rodapé">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img class="footer-shield" src="./assets/escudo-atletico-borda-branca.png" alt="Escudo Atlético Mineiro">
+      <img class="footer-logo-etico" src="./assets/etico-logo-fundo-preto.png" alt="Programa ÉTICO">
+    </div>
+    <div class="footer-links">
+      <a href="https://atletico.com.br" target="_blank" rel="noopener">Site do Galo</a>
+      <a href="https://galonaveia.atletico.com.br/portal-de-privacidade" target="_blank" rel="noopener">Privacidade</a>
+      <a href="https://atletico.com.br/wp-content/uploads/2026/07/CODIGO-DE-ETICA-VF-07.2026.pdf" target="_blank" rel="noopener">Código de Ética</a>
+      <a href="https://canaletico.atletico.com.br" target="_blank" rel="noopener">Canal Ético</a>
+    </div>
+    <div class="footer-copy">© Clube Atlético Mineiro · Programa ÉTICO</div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     INTERACTIVE COMPONENT JS — unchanged from original
+     ============================================================ -->
+<script>
+const pillarNames={resposta:'Identificação e Resposta',reforco:'Reforço',prevencao:'Prevenção'};
+const nodes=[
+  {id:'canal',x:10,y:50,label:'CANAL<br>ÉTICO',title:'Canal Ético',pillar:'resposta',desc:'Recebe relatos de boa-fé, amplia a capacidade de identificação de irregularidades e contribui para a adequada resposta institucional.'},
+  {id:'devida',x:24,y:50,label:'DEVIDA<br>DILIGÊNCIA',title:'Devida Diligência',pillar:'resposta',desc:'Apoia a identificação prévia de riscos relacionados a terceiros, parceiros, patrocinadores, fornecedores, profissionais e relações sensíveis.'},
+  {id:'investigacoes',x:24,y:18,label:'INVESTIGAÇÕES<br>E AUDITORIAS',title:'Investigações e Auditorias',pillar:'resposta',desc:'Permitem apurar fatos, verificar aderência a normas e controles e aprofundar a análise de situações de risco ou irregularidade.'},
+  {id:'monitoramento',x:24,y:82,label:'MONITORAMENTO',title:'Monitoramento',pillar:'resposta',desc:'Acompanha continuamente processos, comportamentos, indicadores e controles, permitindo detectar fragilidades e apoiar a melhoria contínua.'},
+  {id:'gestao',x:38,y:50,label:'GESTÃO<br>DE RISCOS',title:'Gestão de Riscos',pillar:'reforco',desc:'Identifica, avalia e prioriza riscos, orientando a tomada de decisão e a definição de medidas preventivas, corretivas e de controle.'},
+  {id:'controles',x:50,y:18,label:'CONTROLES<br>INTERNOS',title:'Controles Internos',pillar:'reforco',desc:'Estabelecem barreiras, validações, segregações e rotinas de verificação para reduzir vulnerabilidades e reforçar a integridade dos processos.'},
+  {id:'area',x:62,y:50,label:'ÁREA<br>RESPONSÁVEL',title:'Área Responsável',pillar:'reforco',desc:'Coordena, integra, impulsiona e acompanha a execução do Programa ÉTICO, promovendo alinhamento entre suas capacidades e apoiando a governança do tema. Função transversal: conecta-se com todas as demais posições em campo.'},
+  {id:'medidas',x:50,y:82,label:'MEDIDAS E<br>APRIMORAMENTO',title:'Medidas de Aprimoramento',pillar:'reforco',desc:'Transformam achados, desvios, fragilidades e oportunidades de evolução em ações concretas de correção, fortalecimento e melhoria contínua.'},
+  {id:'politicas',x:76,y:18,label:'POLÍTICAS E<br>PROCEDIMENTOS',title:'Políticas e Procedimentos',pillar:'prevencao',desc:'Traduzem diretrizes, regras e expectativas institucionais em orientações práticas para o dia a dia da organização.'},
+  {id:'educacao',x:76,y:82,label:'EDUCAÇÃO E<br>ENGAJAMENTO',title:'Educação e Engajamento',pillar:'prevencao',desc:'Promovem conhecimento, sensibilização, entendimento e compromisso com a ética, a integridade e a conformidade.'},
+  {id:'cultura',x:90,y:50,label:'CULTURA E<br>LIDERANÇA ÉTICA',title:'Cultura e Liderança Ética',pillar:'prevencao',captain:true,desc:'Representa o exemplo cotidiano, a coerência institucional e a influência comportamental necessária para que a ética seja vivida por todos. É o capitão do time: a referência que todas as demais posições seguem.'}
+];
+const connections=[
+  {n:1,from:'gestao',to:'controles',desc:'A leitura dos riscos orienta o desenho, o fortalecimento e a priorização dos controles internos.'},
+  {n:2,from:'gestao',to:'politicas',desc:'Os riscos priorizados influenciam a elaboração, revisão e atualização das políticas e procedimentos.'},
+  {n:3,from:'politicas',to:'educacao',desc:'As regras e orientações precisam ser traduzidas, comunicadas e internalizadas por meio de treinamentos e ações de engajamento.'},
+  {n:4,from:'educacao',to:'cultura',bidi:true,desc:'A educação fortalece a cultura ética, e a cultura ética potencializa a eficácia da educação e do engajamento.'},
+  {n:5,from:'canal',to:'investigacoes',desc:'Relatos recebidos podem demandar apuração, verificação, auditoria ou aprofundamento técnico.'},
+  {n:6,from:'devida',to:'gestao',desc:'Os achados de diligência alimentam a visão de riscos da organização e ajudam a prevenir exposições indevidas.'},
+  {n:7,from:'monitoramento',to:'medidas',desc:'O acompanhamento contínuo gera evidências, achados e aprendizados que devem se converter em melhoria.'},
+  {n:8,from:'investigacoes',to:'medidas',desc:'Apurações e auditorias geram recomendações, correções e aperfeiçoamentos estruturais.'},
+  {n:9,from:'medidas',to:'controles',desc:'A melhoria contínua pode resultar em novos controles ou no fortalecimento dos já existentes.'},
+  {n:10,from:'medidas',to:'politicas',desc:'Achados e lições aprendidas devem gerar ajustes normativos e procedimentais.'},
+  {n:11,from:'medidas',to:'educacao',desc:'As fragilidades identificadas podem ser tratadas com reforço de comunicação, treinamento e sensibilização.'},
+  {n:12,from:'area',to:null,transversal:true,desc:'A área responsável tem função transversal de coordenação, integração e acompanhamento do programa como um todo — conectando-se a todas as capacidades em campo.'}
+];
+const nodeById={};
+nodes.forEach(nd=>nodeById[nd.id]=nd);
+const nodesLayer=document.getElementById('nodesLayer');
+nodes.forEach(nd=>{
+  const btn=document.createElement('button');
+  btn.className='node'+(nd.captain?' captain':'');
+  btn.style.left=nd.x+'%';btn.style.top=nd.y+'%';
+  btn.dataset.id=nd.id;btn.dataset.pillar=nd.pillar;
+  btn.innerHTML=nd.label+(nd.captain?'<span class="cap-star">★</span>':'');
+  btn.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    if(activeNode===nd.id&&callout.classList.contains('show')){deselect();}
+    else{selectNode(nd.id);}
+  });
+  nodesLayer.appendChild(btn);
+});
+const connLinesG=document.getElementById('connLines');
+const connBadgesG=document.getElementById('connBadges');
+const lineEls={};const badgeEls={};
+connections.filter(c=>!c.transversal).forEach(c=>{
+  const a=nodeById[c.from],b=nodeById[c.to];
+  const ax=a.x/100*1601,ay=a.y/100*1140;
+  const bx=b.x/100*1601,by=b.y/100*1140;
+  const mx=(ax+bx)/2,my=(ay+by)/2;
+  const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+  line.setAttribute('x1',ax);line.setAttribute('y1',ay);
+  line.setAttribute('x2',bx);line.setAttribute('y2',by);
+  line.setAttribute('class','conn-line');
+  line.setAttribute('marker-end','url(#arrow)');
+  if(c.bidi)line.setAttribute('marker-start','url(#arrow)');
+  line.addEventListener('click',(e)=>{e.stopPropagation();toggleConnection(c.n);});
+  connLinesG.appendChild(line);lineEls[c.n]=line;
+  const badge=document.createElementNS('http://www.w3.org/2000/svg','g');
+  badge.setAttribute('class','conn-badge');
+  badge.innerHTML='<circle cx="'+mx+'" cy="'+my+'" r="22"></circle><text x="'+mx+'" y="'+(my+1)+'">'+c.n+'</text>';
+  badge.addEventListener('click',(e)=>{e.stopPropagation();toggleConnection(c.n);});
+  connBadgesG.appendChild(badge);badgeEls[c.n]=badge;
+});
+const infoBody=document.getElementById('infoBody');
+const callout=document.getElementById('callout');
+const calloutTag=document.getElementById('calloutTag');
+const calloutTitle=document.getElementById('calloutTitle');
+const calloutDesc=document.getElementById('calloutDesc');
+let activeNode=null,activeConn=null;
+function clearHighlights(){
+  document.querySelectorAll('.node').forEach(n=>n.classList.remove('selected'));
+  Object.values(lineEls).forEach(l=>l.classList.remove('hot'));
+  Object.values(badgeEls).forEach(b=>b.classList.remove('hot'));
+  document.getElementById('areaRing').classList.remove('show');
+}
+function positionCallout(xPct,yPct){
+  callout.style.left=xPct+'%';callout.style.top=yPct+'%';
+  let tx='-50%';
+  if(xPct<20)tx='-12%';else if(xPct>80)tx='-88%';
+  const ty=(yPct>55)?'-122%':'24%';
+  callout.style.transform='translate('+tx+','+ty+')';
+}
+function openCallout(xPct,yPct,tag,title,desc){
+  calloutTag.textContent=tag;calloutTitle.textContent=title;calloutDesc.textContent=desc;
+  positionCallout(xPct,yPct);callout.classList.add('show');
+}
+function deselect(){
+  clearHighlights();callout.classList.remove('show');
+  activeNode=null;activeConn=null;
+  infoBody.innerHTML='<p class="info-placeholder">Clique em uma posição do campo (ou em uma conexão, quando ativada) para ver a descrição aqui.</p>';
+}
+function selectNode(id){
+  activeNode=id;activeConn=null;clearHighlights();
+  const nd=nodeById[id];
+  document.querySelector('.node[data-id="'+id+'"]').classList.add('selected');
+  const tag=pillarNames[nd.pillar]+(nd.captain?' · Capitão':'');
+  infoBody.innerHTML='<span class="info-pillar-tag">'+tag+'</span><p class="info-title">'+nd.title+'</p><p class="info-desc">'+nd.desc+'</p>';
+  if(id==='area'){document.getElementById('areaRing').classList.add('show');}
+  openCallout(nd.x,nd.y,tag,nd.title,nd.desc);
+}
+function toggleConnection(n){
+  if(activeConn===n&&callout.classList.contains('show')){deselect();}
+  else{selectConnection(n);}
+}
+function selectConnection(n){
+  activeConn=n;activeNode=null;clearHighlights();
+  const c=connections.find(x=>x.n===n);
+  if(c.transversal){
+    document.getElementById('areaRing').classList.add('show');
+    document.querySelector('.node[data-id="area"]').classList.add('selected');
+    const areaNode=nodeById['area'];
+    const tag='Conexão '+n+' · Transversal';
+    const title='Área Responsável ↔ Todos os elementos';
+    infoBody.innerHTML='<span class="info-pillar-tag">'+tag+'</span><p class="info-title">'+title+'</p><p class="info-desc">'+c.desc+'</p>';
+    openCallout(areaNode.x,areaNode.y,tag,title,c.desc);return;
+  }
+  lineEls[n].classList.add('hot');badgeEls[n].classList.add('hot');
+  document.querySelector('.node[data-id="'+c.from+'"]').classList.add('selected');
+  document.querySelector('.node[data-id="'+c.to+'"]').classList.add('selected');
+  const arrow=c.bidi?' ↔ ':' → ';
+  const tag='Conexão '+n;
+  const title=nodeById[c.from].title+arrow+nodeById[c.to].title;
+  infoBody.innerHTML='<span class="info-pillar-tag">'+tag+'</span><p class="info-title">'+title+'</p><p class="info-desc">'+c.desc+'</p>';
+  const midX=(nodeById[c.from].x+nodeById[c.to].x)/2;
+  const midY=(nodeById[c.from].y+nodeById[c.to].y)/2;
+  openCallout(midX,midY,tag,title,c.desc);
+}
+document.getElementById('calloutClose').addEventListener('click',(e)=>{e.stopPropagation();deselect();});
+callout.addEventListener('click',(e)=>e.stopPropagation());
+document.getElementById('fieldWrap').addEventListener('click',deselect);
+const thirdBtns=document.querySelectorAll('.third-btn');
+const btnAll=document.getElementById('btnAll');
+let activePillar=null;
+function applyPillarFilter(pillar){
+  activePillar=pillar;
+  thirdBtns.forEach(b=>{
+    b.classList.toggle('active',pillar&&b.dataset.pillar===pillar);
+    b.classList.toggle('dim',pillar&&b.dataset.pillar!==pillar);
+  });
+  document.querySelectorAll('.node').forEach(n=>{
+    n.classList.toggle('dim',pillar&&n.dataset.pillar!==pillar);
+  });
+  btnAll.classList.toggle('on',!pillar);
+}
+thirdBtns.forEach(b=>b.addEventListener('click',()=>{applyPillarFilter(activePillar===b.dataset.pillar?null:b.dataset.pillar);}));
+btnAll.addEventListener('click',()=>applyPillarFilter(null));
+applyPillarFilter(null);
+const btnConn=document.getElementById('btnConn');
+const connLayer=document.getElementById('connLayer');
+const connList=document.getElementById('connList');
+let connOn=false;
+connections.forEach(c=>{
+  const li=document.createElement('li');
+  const label=c.transversal?'Área Responsável ↔ Todos os elementos':nodeById[c.from].title+(c.bidi?' ↔ ':' → ')+nodeById[c.to].title;
+  li.innerHTML='<span class="conn-num">'+c.n+'</span><span class="conn-text"><b>'+label+'</b><span>'+c.desc+'</span></span>';
+  li.addEventListener('click',()=>toggleConnection(c.n));
+  connList.appendChild(li);
+});
+btnConn.addEventListener('click',()=>{
+  connOn=!connOn;
+  connLayer.classList.toggle('show',connOn);
+  btnConn.classList.toggle('on',connOn);
+  btnConn.textContent=connOn?'Ocultar conexões':'Mostrar conexões';
+  connList.classList.toggle('hidden',!connOn);
+  if(!connOn){deselect();}
+});
+document.getElementById('btnFull').addEventListener('click',()=>{
+  const el=document.documentElement;
+  if(!document.fullscreenElement){el.requestFullscreen&&el.requestFullscreen();}
+  else{document.exitFullscreen&&document.exitFullscreen();}
+});
+</script>
+</body>
+</html>
