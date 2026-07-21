@@ -941,6 +941,23 @@ button { -webkit-tap-highlight-color: transparent; }
   .escalacao-embed .callout-title { font-size: 16px; }
   .escalacao-embed .callout-desc { font-size: 13.5px; }
 }
+
+/* ---- Portrait (mobile) mode: campo em pé, sem scroll lateral ---- */
+.escalacao-embed.is-portrait .pitch-scroll { overflow-x: visible; }
+.escalacao-embed.is-portrait .pitch-inner { min-width: 0; }
+.escalacao-embed.is-portrait .scroll-hint { display: none; }
+.escalacao-embed.is-portrait .field-wrap {
+  aspect-ratio: 1140 / 1601;
+  background: repeating-linear-gradient(0deg,#1f4f2c 0 52px,#256134 52px 104px);
+}
+.escalacao-embed.is-portrait .node {
+  width: 16%;
+  font-size: clamp(9px, 2.9cqw, 12.5px);
+  border-width: 2.5px;
+  padding: 3%;
+}
+.escalacao-embed.is-portrait .node .cap-star { top: -8px; font-size: 13px; }
+.escalacao-embed.is-portrait .conn-badge circle { stroke-width: 3; }
 </style>
 </head>
 <body>
@@ -1117,7 +1134,8 @@ button { -webkit-tap-highlight-color: transparent; }
               <button class="third-btn" data-pillar="prevencao">Prevenção</button>
             </div>
             <div class="field-wrap" id="fieldWrap">
-              <svg class="pitch-lines" viewBox="0 0 1601 1140" preserveAspectRatio="none">
+              <svg class="pitch-lines" id="pitchLines" viewBox="0 0 1601 1140" preserveAspectRatio="none">
+                <g id="pitchG">
                 <rect x="40" y="40" width="1521" height="1060"></rect>
                 <line x1="800" y1="40" x2="800" y2="1100"></line>
                 <circle cx="800" cy="570" r="130"></circle>
@@ -1132,6 +1150,7 @@ button { -webkit-tap-highlight-color: transparent; }
                 <path d="M1491,40 A70,70 0 0,1 1561,110"></path>
                 <path d="M1561,1030 A70,70 0 0,1 1491,1100"></path>
                 <path d="M110,1100 A70,70 0 0,1 40,1030"></path>
+                </g>
               </svg>
               <svg class="conn-layer" id="connLayer" viewBox="0 0 1601 1140" preserveAspectRatio="none">
                 <defs>
@@ -1608,6 +1627,11 @@ const connections=[
 ];
 const nodeById={};
 nodes.forEach(nd=>nodeById[nd.id]=nd);
+const embedEl=document.querySelector('.escalacao-embed');
+/* Portrait (celular) rotaciona o campo 90°: o ponto landscape (x,y) vira (y,100-x). */
+function isPortraitMode(){ return window.matchMedia('(max-width: 820px)').matches; }
+function nodePos(nd,portrait){ return portrait?{left:nd.y,top:100-nd.x}:{left:nd.x,top:nd.y}; }
+function svgPos(nd,portrait){ return portrait?{x:nd.y/100*1140,y:(100-nd.x)/100*1601}:{x:nd.x/100*1601,y:nd.y/100*1140}; }
 const nodesLayer=document.getElementById('nodesLayer');
 nodes.forEach(nd=>{
   const btn=document.createElement('button');
@@ -1679,7 +1703,8 @@ function selectNode(id){
   const tag=pillarNames[nd.pillar]+(nd.captain?' · Capitão':'');
   infoBody.innerHTML='<span class="info-pillar-tag">'+tag+'</span><p class="info-title">'+nd.title+'</p><p class="info-desc">'+nd.desc+'</p>';
   if(id==='area'){document.getElementById('areaRing').classList.add('show');}
-  openCallout(nd.x,nd.y,tag,nd.title,nd.desc);
+  const dp=nodePos(nd,isPortraitMode());
+  openCallout(dp.left,dp.top,tag,nd.title,nd.desc);
 }
 function toggleConnection(n){
   if(activeConn===n&&callout.classList.contains('show')){deselect();}
@@ -1695,7 +1720,8 @@ function selectConnection(n){
     const tag='Conexão '+n+' · Transversal';
     const title='Área Responsável ↔ Todos os elementos';
     infoBody.innerHTML='<span class="info-pillar-tag">'+tag+'</span><p class="info-title">'+title+'</p><p class="info-desc">'+c.desc+'</p>';
-    openCallout(areaNode.x,areaNode.y,tag,title,c.desc);return;
+    const ap=nodePos(areaNode,isPortraitMode());
+    openCallout(ap.left,ap.top,tag,title,c.desc);return;
   }
   lineEls[n].classList.add('hot');badgeEls[n].classList.add('hot');
   document.querySelector('.node[data-id="'+c.from+'"]').classList.add('selected');
@@ -1704,9 +1730,9 @@ function selectConnection(n){
   const tag='Conexão '+n;
   const title=nodeById[c.from].title+arrow+nodeById[c.to].title;
   infoBody.innerHTML='<span class="info-pillar-tag">'+tag+'</span><p class="info-title">'+title+'</p><p class="info-desc">'+c.desc+'</p>';
-  const midX=(nodeById[c.from].x+nodeById[c.to].x)/2;
-  const midY=(nodeById[c.from].y+nodeById[c.to].y)/2;
-  openCallout(midX,midY,tag,title,c.desc);
+  const pm=isPortraitMode();
+  const pf=nodePos(nodeById[c.from],pm),pt=nodePos(nodeById[c.to],pm);
+  openCallout((pf.left+pt.left)/2,(pf.top+pt.top)/2,tag,title,c.desc);
 }
 document.getElementById('calloutClose').addEventListener('click',(e)=>{e.stopPropagation();deselect();});
 callout.addEventListener('click',(e)=>e.stopPropagation());
@@ -1747,6 +1773,49 @@ btnConn.addEventListener('click',()=>{
   connList.classList.toggle('hidden',!connOn);
   if(!connOn){deselect();}
 });
+function layoutField(){
+  const portrait=isPortraitMode();
+  embedEl.classList.toggle('is-portrait',portrait);
+  // Campo (linhas): rotaciona o desenho 90° no modo retrato
+  const pl=document.getElementById('pitchLines');
+  const pg=document.getElementById('pitchG');
+  if(portrait){ pl.setAttribute('viewBox','0 0 1140 1601'); pg.setAttribute('transform','rotate(-90) translate(-1601 0)'); }
+  else { pl.setAttribute('viewBox','0 0 1601 1140'); pg.removeAttribute('transform'); }
+  connLayer.setAttribute('viewBox',portrait?'0 0 1140 1601':'0 0 1601 1140');
+  // Jogadores
+  nodes.forEach(nd=>{
+    const el=document.querySelector('.node[data-id="'+nd.id+'"]');
+    const p=nodePos(nd,portrait);
+    el.style.left=p.left+'%'; el.style.top=p.top+'%';
+  });
+  // Linhas e números de conexão
+  connections.filter(c=>!c.transversal).forEach(c=>{
+    const a=svgPos(nodeById[c.from],portrait),b=svgPos(nodeById[c.to],portrait);
+    const line=lineEls[c.n];
+    line.setAttribute('x1',a.x);line.setAttribute('y1',a.y);line.setAttribute('x2',b.x);line.setAttribute('y2',b.y);
+    const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+    const badge=badgeEls[c.n];
+    const circ=badge.querySelector('circle'),txt=badge.querySelector('text');
+    circ.setAttribute('cx',mx);circ.setAttribute('cy',my);
+    txt.setAttribute('x',mx);txt.setAttribute('y',my+1);
+  });
+  // Anel da Área Responsável
+  const ap=svgPos(nodeById['area'],portrait);
+  const ring=document.getElementById('areaRing');
+  ring.setAttribute('cx',ap.x);ring.setAttribute('cy',ap.y);ring.setAttribute('r',portrait?72:95);
+  // Reposiciona o callout aberto (quando não é bottom-sheet)
+  if(callout.classList.contains('show')){
+    if(activeNode){ const dp=nodePos(nodeById[activeNode],portrait); positionCallout(dp.left,dp.top); }
+    else if(activeConn){
+      const c=connections.find(x=>x.n===activeConn);
+      if(c&&c.transversal){ const dp=nodePos(nodeById['area'],portrait); positionCallout(dp.left,dp.top); }
+      else if(c){ const f=nodePos(nodeById[c.from],portrait),t=nodePos(nodeById[c.to],portrait); positionCallout((f.left+t.left)/2,(f.top+t.top)/2); }
+    }
+  }
+}
+let layoutRAF=null;
+window.addEventListener('resize',()=>{ if(layoutRAF)cancelAnimationFrame(layoutRAF); layoutRAF=requestAnimationFrame(layoutField); });
+layoutField();
 document.getElementById('btnFull').addEventListener('click',()=>{
   const el=document.documentElement;
   if(!document.fullscreenElement){el.requestFullscreen&&el.requestFullscreen();}
