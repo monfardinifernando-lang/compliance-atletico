@@ -16,11 +16,16 @@
 <meta property="og:title" content="Programa ÉTICO — Atlético">
 <meta property="og:description" content="Conheça o Programa de Integridade do Atlético: governança, políticas, cultura, ESG e Canal Ético.">
 <meta property="og:url" content="https://compliance.atletico.com.br/">
-<meta property="og:image" content="https://compliance.atletico.com.br/assets/etico-logo-fundo-preto.png">
+<meta property="og:image" content="https://compliance.atletico.com.br/assets/og-etico.png">
+<meta property="og:image:secure_url" content="https://compliance.atletico.com.br/assets/og-etico.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Programa ÉTICO — Ética, Integridade e Compliance · Atlético">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Programa ÉTICO — Atlético">
 <meta name="twitter:description" content="Conheça o Programa de Integridade do Atlético.">
-<meta name="twitter:image" content="https://compliance.atletico.com.br/assets/etico-logo-fundo-preto.png">
+<meta name="twitter:image" content="https://compliance.atletico.com.br/assets/og-etico.png">
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -593,6 +598,106 @@ button { -webkit-tap-highlight-color: transparent; }
 .cultura-quote__sub { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.75); }
 
 /* ============================================================
+   TREINAMENTO ÉTICO (CTA na seção Cultura)
+   ============================================================ */
+.treino-cta {
+  margin-top: 48px;
+  background: var(--ink); color: var(--white);
+  border-radius: var(--radius);
+  border-left: 5px solid var(--gold);
+  padding: 36px 36px;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 32px; align-items: center;
+  position: relative; overflow: hidden;
+}
+.treino-cta::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 50% 90% at 95% 50%, rgba(255,203,0,.10) 0%, transparent 70%);
+}
+.treino-cta > * { position: relative; }
+.treino-cta__badge {
+  display: inline-block; font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink); background: var(--gold);
+  padding: 4px 12px; border-radius: 999px; margin-bottom: 14px;
+}
+.treino-cta__title {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+  text-transform: uppercase; line-height: 1.12; margin-bottom: 12px;
+}
+.treino-cta__title em { font-style: normal; color: var(--gold); }
+.treino-cta__body { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.8); max-width: 640px; }
+.treino-cta__meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 16px; font-size: 13px; color: rgba(255,255,255,.6); }
+.treino-cta__meta span::before { content: '✓ '; color: var(--gold); font-weight: 700; }
+.treino-cta__action { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.treino-cta__action .btn { font-size: 15px; padding: 15px 30px; }
+.treino-cta__note { font-size: 12px; color: rgba(255,255,255,.5); }
+
+/* ============================================================
+   PRIVACIDADE
+   ============================================================ */
+.privacidade-section { background: var(--smoke); }
+.privacidade-grid {
+  display: grid; grid-template-columns: 1.15fr .85fr;
+  gap: 40px; align-items: start; margin-top: 36px;
+}
+.video-facade {
+  position: relative; display: block; width: 100%;
+  aspect-ratio: 16 / 9; border: 0; padding: 0; cursor: pointer;
+  border-radius: var(--radius); overflow: hidden; background: var(--ink);
+  box-shadow: var(--panel-shadow);
+}
+.video-facade img { width: 100%; height: 100%; object-fit: cover; opacity: .82; transition: opacity .2s, transform .3s; }
+.video-facade:hover img, .video-facade:focus-visible img { opacity: .65; transform: scale(1.02); }
+.video-facade:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.video-facade__play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 76px; height: 76px; border-radius: 50%;
+  background: var(--gold); color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,.45);
+}
+.video-facade__play svg { width: 30px; height: 30px; margin-left: 4px; }
+.video-facade__label {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 36px 20px 16px; text-align: left;
+  background: linear-gradient(transparent, rgba(0,0,0,.85));
+  color: var(--white); font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800; font-size: 16px; text-transform: uppercase; letter-spacing: .03em;
+}
+.video-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius); display: block; background: var(--ink); }
+.video-note { font-size: 12.5px; color: var(--gray); line-height: 1.5; margin-top: 10px; }
+.video-note a { color: var(--gold-deep); text-decoration: underline; }
+.priv-list { display: flex; flex-direction: column; gap: 14px; }
+.priv-item {
+  background: var(--white); border-radius: 12px; padding: 18px 20px;
+  border-left: 3px solid var(--gold); box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.priv-item__title {
+  font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 800; font-size: 15px;
+  text-transform: uppercase; letter-spacing: .02em; margin-bottom: 6px;
+}
+.priv-item__body { font-size: 14px; line-height: 1.55; color: #3a3a3a; }
+.priv-cta {
+  margin-top: 36px; background: var(--ink); color: var(--white);
+  border-radius: var(--radius); padding: 28px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+}
+.priv-cta__text { font-size: 15px; line-height: 1.55; color: rgba(255,255,255,.8); max-width: 680px; }
+.priv-cta__text strong { color: var(--gold); font-family: 'Arial Narrow', Arial, sans-serif; text-transform: uppercase; letter-spacing: .03em; display: block; font-size: 17px; margin-bottom: 4px; }
+@media (max-width: 900px) {
+  .privacidade-grid { grid-template-columns: 1fr; gap: 28px; }
+  .treino-cta { grid-template-columns: 1fr; padding: 28px 24px; gap: 22px; }
+  .treino-cta__action { align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .priv-cta { padding: 24px 20px; }
+  .treino-cta__action { align-items: stretch; }
+  .treino-cta__note { text-align: center; }
+}
+
+/* ============================================================
    TERCEIROS
    ============================================================ */
 .terceiros-section { background: var(--white); }
@@ -981,7 +1086,9 @@ button { -webkit-tap-highlight-color: transparent; }
       <a class="navbar__link" href="#estrutura">Escalação</a>
       <a class="navbar__link" href="#governanca">Governança</a>
       <a class="navbar__link" href="#politicas">Políticas</a>
+      <a class="navbar__link" href="#privacidade">Privacidade</a>
       <a class="navbar__link" href="#cultura">Cultura</a>
+      <a class="navbar__link" href="./treinamento-etico/">Treinamento</a>
       <a class="navbar__link" href="#terceiros">Terceiros</a>
       <a class="navbar__link" href="#esg">ESG</a>
       <a class="navbar__link navbar__link--hidden" href="#resultados">Resultados</a>
@@ -1377,7 +1484,7 @@ button { -webkit-tap-highlight-color: transparent; }
         <div class="politica-card__icon">🔒</div>
         <div class="politica-card__title">Portal da Privacidade</div>
         <div class="politica-card__desc">Informações sobre tratamento de dados pessoais, direitos dos titulares e políticas de privacidade do Clube, em conformidade com a LGPD.</div>
-        <a class="politica-card__link" href="https://galonaveia.atletico.com.br/portal-de-privacidade" target="_blank" rel="noopener">Acessar portal →</a>
+        <a class="politica-card__link" href="#privacidade">Saiba mais →</a>
       </div>
       <div class="politica-card">
         <div class="politica-card__icon">📋</div>
@@ -1385,6 +1492,52 @@ button { -webkit-tap-highlight-color: transparent; }
         <div class="politica-card__desc">Normas de prevenção à lavagem de dinheiro, política anticorrupção, normas de controles internos e demais procedimentos do programa.</div>
         <span class="badge-soon">Em breve</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRIVACIDADE E PROTEÇÃO DE DADOS
+     ============================================================ -->
+<section id="privacidade" class="privacidade-section section-pad" aria-label="Privacidade e Proteção de Dados">
+  <div class="container">
+    <p class="eyebrow">LGPD · Proteção de dados</p>
+    <h2 class="section-title">Privacidade e Biometria</h2>
+    <p class="section-body">
+      O Atlético trata os dados pessoais de torcedores, sócios, atletas, colaboradores e parceiros com transparência, segurança e respeito à Lei Geral de Proteção de Dados Pessoais (LGPD). No Portal de Privacidade você encontra as políticas do Clube e os caminhos para exercer seus direitos como titular.
+    </p>
+    <div class="privacidade-grid">
+      <div>
+        <div id="videoPrivacidade">
+          <button type="button" class="video-facade" data-yt="xh3yOqV1ae4" aria-label="Assistir ao vídeo: Proteção de Dados para Torcedores">
+            <img src="https://i.ytimg.com/vi/xh3yOqV1ae4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+            <span class="video-facade__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="video-facade__label">Proteção de Dados para Torcedores</span>
+          </button>
+        </div>
+        <p class="video-note">O vídeo é carregado a partir do YouTube somente após você clicar em reproduzir, no modo de privacidade aprimorada. <a href="https://youtu.be/xh3yOqV1ae4" target="_blank" rel="noopener">Assistir no YouTube ↗</a></p>
+      </div>
+      <div class="priv-list">
+        <div class="priv-item">
+          <div class="priv-item__title">Políticas de Privacidade</div>
+          <div class="priv-item__body">Explicam quais dados são coletados, para quais finalidades, com quem podem ser compartilhados e por quanto tempo são mantidos.</div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-item__title">Biometria facial</div>
+          <div class="priv-item__body">A identificação biométrica no acesso ao estádio é exigência da Lei Geral do Esporte e contribui para a segurança de todos. Por se tratar de dado pessoal sensível, é utilizada apenas para as finalidades informadas e protegida por medidas reforçadas de segurança.</div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-item__title">Seus direitos como titular</div>
+          <div class="priv-item__body">Confirmar a existência de tratamento, acessar, corrigir ou atualizar seus dados, solicitar informações sobre compartilhamento e, quando cabível, pedir anonimização ou eliminação.</div>
+        </div>
+      </div>
+    </div>
+    <div class="priv-cta">
+      <div class="priv-cta__text">
+        <strong>Portal de Privacidade do Atlético</strong>
+        Consulte as políticas completas, tire dúvidas e registre solicitações relacionadas aos seus dados pessoais.
+      </div>
+      <a class="btn btn--primary" href="https://galonaveia.atletico.com.br/portal-de-privacidade" target="_blank" rel="noopener">Acessar Portal de Privacidade</a>
     </div>
   </div>
 </section>
@@ -1453,6 +1606,25 @@ button { -webkit-tap-highlight-color: transparent; }
             <span class="tag">Código de Ética</span>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="treino-cta" id="treinamento">
+      <div>
+        <span class="treino-cta__badge">Novo · Aberto ao público</span>
+        <h3 class="treino-cta__title">Mini Experiência ÉTICO: <em>integridade também faz parte do jogo</em></h3>
+        <p class="treino-cta__body">
+          Um treinamento rápido e interativo para conhecer o Programa ÉTICO na prática: os valores do Galo, o comportamento na arquibancada, os cuidados com apostas, a proteção de crianças e adolescentes e como usar o Canal Ético. Ao final, você participa de um desafio aberto ao público.
+        </p>
+        <div class="treino-cta__meta">
+          <span>9 etapas</span>
+          <span>Poucos minutos</span>
+          <span>Funciona no celular</span>
+          <span>Sem cadastro para começar</span>
+        </div>
+      </div>
+      <div class="treino-cta__action">
+        <a class="btn btn--primary" href="./treinamento-etico/">Fazer o treinamento →</a>
+        <span class="treino-cta__note">Gratuito · Para torcedores, colaboradores e parceiros</span>
       </div>
     </div>
   </div>
@@ -1529,8 +1701,9 @@ button { -webkit-tap-highlight-color: transparent; }
         <div class="esg-card__body">Gestão hídrica, energética e de resíduos como pilares da operação ambiental responsável do Clube.</div>
       </div>
     </div>
-    <div style="margin-top:36px;text-align:center;">
-      <a class="btn btn--primary" href="https://atletico.com.br/esg/" target="_blank" rel="noopener">Ver página ESG completa</a>
+    <div style="margin-top:36px;text-align:center;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn--primary" href="https://atletico.com.br/wp-content/uploads/2026/04/20260430-Relatorio-Integrado-AM-SAFGALO.pdf" target="_blank" rel="noopener">Relatório Integrado 2025</a>
+      <a class="btn btn--outline" href="https://atletico.com.br/esg/" target="_blank" rel="noopener">Ver página ESG completa</a>
     </div>
   </div>
 </section>
@@ -1586,6 +1759,7 @@ button { -webkit-tap-highlight-color: transparent; }
     <div class="footer-links">
       <a href="https://atletico.com.br" target="_blank" rel="noopener">Site do Galo</a>
       <a href="https://galonaveia.atletico.com.br/portal-de-privacidade" target="_blank" rel="noopener">Privacidade</a>
+      <a href="./treinamento-etico/">Treinamento ÉTICO</a>
       <a href="https://atletico.com.br/wp-content/uploads/2026/07/CODIGO-DE-ETICA-VF-07.2026.pdf" target="_blank" rel="noopener">Código de Ética</a>
       <a href="https://canaletico.atletico.com.br" target="_blank" rel="noopener">Canal Ético</a>
     </div>
@@ -1820,6 +1994,22 @@ document.getElementById('btnFull').addEventListener('click',()=>{
   const el=document.documentElement;
   if(!document.fullscreenElement){el.requestFullscreen&&el.requestFullscreen();}
   else{document.exitFullscreen&&document.exitFullscreen();}
+});
+</script>
+<script>
+/* Vídeo de privacidade: carrega o player do YouTube (nocookie) só após o clique */
+document.querySelectorAll('.video-facade').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var id = btn.getAttribute('data-yt');
+    var f = document.createElement('iframe');
+    f.className = 'video-frame';
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    f.title = 'Proteção de Dados para Torcedores';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    f.allowFullscreen = true;
+    btn.replaceWith(f);
+  });
 });
 </script>
 </body>
