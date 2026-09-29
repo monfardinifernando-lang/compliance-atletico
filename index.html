@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programa ÉTICO — Atlético</title>
-<meta name="description" content="Conheça o Programa ÉTICO do Atlético: um programa de integridade completo com governança, políticas, cultura, ESG e Canal Ético.">
+<meta name="description" content="Conheça o Programa ÉTICO do Atlético: governança, políticas, privacidade, treinamento público, ESG e Canal Ético.">
 <meta name="theme-color" content="#101010">
 <link rel="canonical" href="https://compliance.atletico.com.br/">
-<link rel="icon" type="image/png" href="./assets/escudo-atletico.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./assets/icon-512.png">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -52,6 +54,7 @@
 :root {
   --gold:       #FFCB00;
   --gold-deep:  #B8901A;
+  --gold-text:  #8A6A00; /* dourado escurecido para texto sobre fundo claro (contraste AA) */
   --ink:        #101010;
   --charcoal:   #1B1B1B;
   --smoke:      #F5F4F0;
@@ -66,7 +69,11 @@
    RESET & BASE
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 8px); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--smoke);
@@ -85,7 +92,7 @@ button { -webkit-tap-highlight-color: transparent; }
   letter-spacing: .28em;
   font-size: 11px;
   font-weight: 700;
-  color: var(--gold-deep);
+  color: var(--gold-text);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -441,7 +448,7 @@ button { -webkit-tap-highlight-color: transparent; }
 .reporte-arrow-label {
   font-family: 'Arial Narrow', Arial, sans-serif;
   font-size: 10px; font-weight: 800; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--gold-deep);
+  text-transform: uppercase; color: var(--gold-text);
   margin: 6px 0 2px;
 }
 
@@ -547,7 +554,7 @@ button { -webkit-tap-highlight-color: transparent; }
   font-family: 'Arial Narrow', Arial, sans-serif;
   font-weight: 700; font-size: 13px;
   text-transform: uppercase; letter-spacing: .04em;
-  color: var(--gold-deep); text-decoration: none;
+  color: var(--gold-text); text-decoration: none;
 }
 .politica-card__link:hover { color: var(--ink); text-decoration: underline; }
 .badge-soon {
@@ -668,7 +675,7 @@ button { -webkit-tap-highlight-color: transparent; }
 }
 .video-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius); display: block; background: var(--ink); }
 .video-note { font-size: 12.5px; color: var(--gray); line-height: 1.5; margin-top: 10px; }
-.video-note a { color: var(--gold-deep); text-decoration: underline; }
+.video-note a { color: var(--gold-text); text-decoration: underline; }
 .priv-list { display: flex; flex-direction: column; gap: 14px; }
 .priv-item {
   background: var(--white); border-radius: 12px; padding: 18px 20px;
@@ -1072,13 +1079,13 @@ button { -webkit-tap-highlight-color: transparent; }
      ============================================================ -->
 <nav class="navbar" aria-label="Navegação principal">
   <div class="navbar__inner">
-    <a class="navbar__brand" href="#programa" aria-label="Programa ÉTICO — Atlético Mineiro SAF">
+    <a class="navbar__brand" href="#programa" aria-label="Programa ÉTICO — Clube Atlético Mineiro">
       <img class="navbar__shield"
            src="./assets/escudo-atletico-borda-branca.png"
            alt="Escudo do Clube Atlético Mineiro">
       <span class="navbar__divider" aria-hidden="true"></span>
       <img class="navbar__logo-etico"
-           src="./assets/etico-logo-fundo-preto.png"
+           src="./assets/etico-logo-web.png"
            alt="Programa ÉTICO">
     </a>
     <div class="navbar__links">
@@ -1098,6 +1105,8 @@ button { -webkit-tap-highlight-color: transparent; }
   </div>
 </nav>
 
+<main id="conteudo">
+
 <!-- ============================================================
      SEÇÃO 1 · HERO
      ============================================================ -->
@@ -1107,7 +1116,7 @@ button { -webkit-tap-highlight-color: transparent; }
       <div>
         <div class="hero__badge">
           <span class="hero__badge-dot" aria-hidden="true"></span>
-          <span class="hero__badge-text">Programa de Integridade · Atlético Mineiro SAF</span>
+          <span class="hero__badge-text">Programa de Integridade · Clube Atlético Mineiro</span>
         </div>
         <h1 class="hero__title">
           Integridade faz parte<br>
@@ -1122,7 +1131,7 @@ button { -webkit-tap-highlight-color: transparent; }
         </div>
       </div>
       <div class="hero__shield-wrap" aria-hidden="true">
-        <img src="./assets/escudo-atletico.png" alt="">
+        <img src="./assets/escudo-atletico-web.png" alt="" width="260" height="392">
       </div>
     </div>
   </div>
@@ -1158,21 +1167,21 @@ button { -webkit-tap-highlight-color: transparent; }
         </div>
         <div class="about__pillars">
           <div class="pillar-item">
-            <div class="pillar-item__icon">🛡</div>
+            <div class="pillar-item__icon" aria-hidden="true">🛡</div>
             <div>
               <div class="pillar-item__title">Prevenção</div>
               <div class="pillar-item__desc">Políticas, educação e cultura ética que atuam antes da ocorrência do desvio, fortalecendo o ambiente de integridade.</div>
             </div>
           </div>
           <div class="pillar-item">
-            <div class="pillar-item__icon">⚙️</div>
+            <div class="pillar-item__icon" aria-hidden="true">⚙️</div>
             <div>
               <div class="pillar-item__title">Reforço</div>
               <div class="pillar-item__desc">Gestão de riscos, controles internos e a área responsável que sustenta, articula e impulsiona o programa continuamente.</div>
             </div>
           </div>
           <div class="pillar-item">
-            <div class="pillar-item__icon">🔍</div>
+            <div class="pillar-item__icon" aria-hidden="true">🔍</div>
             <div>
               <div class="pillar-item__title">Identificação e Resposta</div>
               <div class="pillar-item__desc">Canal Ético, devida diligência, investigações e monitoramento que detectam, apuram e corrigem situações de risco.</div>
@@ -1200,17 +1209,17 @@ button { -webkit-tap-highlight-color: transparent; }
       </p>
       <div class="cards-grid">
         <div class="card">
-          <div class="card__icon">🏆</div>
+          <div class="card__icon" aria-hidden="true">🏆</div>
           <div class="card__title">Confiança</div>
           <div class="card__body">Relações baseadas em transparência com parceiros, patrocinadores e fornecedores fortalecem o ecossistema do Clube.</div>
         </div>
         <div class="card">
-          <div class="card__icon">📋</div>
+          <div class="card__icon" aria-hidden="true">📋</div>
           <div class="card__title">Conformidade</div>
           <div class="card__body">Políticas claras e processos auditáveis reduzem riscos regulatórios e protegem a reputação do Atlético no mercado.</div>
         </div>
         <div class="card">
-          <div class="card__icon">📈</div>
+          <div class="card__icon" aria-hidden="true">📈</div>
           <div class="card__title">Sustentabilidade</div>
           <div class="card__body">Governança sólida cria as bases para o crescimento de longo prazo, atraindo investimentos e permitindo operações mais eficientes.</div>
         </div>
@@ -1469,25 +1478,25 @@ button { -webkit-tap-highlight-color: transparent; }
     </p>
     <div class="politicas-grid">
       <div class="politica-card">
-        <div class="politica-card__icon">📄</div>
+        <div class="politica-card__icon" aria-hidden="true">📄</div>
         <div class="politica-card__title">Código de Ética</div>
         <div class="politica-card__desc">Define os valores, princípios e comportamentos esperados de todos que se relacionam com o Atlético.</div>
         <a class="politica-card__link" href="https://atletico.com.br/wp-content/uploads/2026/07/CODIGO-DE-ETICA-VF-07.2026.pdf" target="_blank" rel="noopener">Acessar documento →</a>
       </div>
       <div class="politica-card">
-        <div class="politica-card__icon">🤝</div>
+        <div class="politica-card__icon" aria-hidden="true">🤝</div>
         <div class="politica-card__title">Código de Conduta para Terceiros</div>
         <div class="politica-card__desc">Estabelece os padrões de conduta exigidos de fornecedores, parceiros e prestadores de serviço do Atlético.</div>
         <a class="politica-card__link" href="https://atletico.com.br/wp-content/uploads/2024/09/Codigo-de-Conduta-para-Terceiros.pdf" target="_blank" rel="noopener">Acessar documento →</a>
       </div>
       <div class="politica-card">
-        <div class="politica-card__icon">🔒</div>
+        <div class="politica-card__icon" aria-hidden="true">🔒</div>
         <div class="politica-card__title">Portal da Privacidade</div>
         <div class="politica-card__desc">Informações sobre tratamento de dados pessoais, direitos dos titulares e políticas de privacidade do Clube, em conformidade com a LGPD.</div>
         <a class="politica-card__link" href="#privacidade">Saiba mais →</a>
       </div>
       <div class="politica-card">
-        <div class="politica-card__icon">📋</div>
+        <div class="politica-card__icon" aria-hidden="true">📋</div>
         <div class="politica-card__title">Demais Políticas Internas</div>
         <div class="politica-card__desc">Normas de prevenção à lavagem de dinheiro, política anticorrupção, normas de controles internos e demais procedimentos do programa.</div>
         <span class="badge-soon">Em breve</span>
@@ -1556,14 +1565,14 @@ button { -webkit-tap-highlight-color: transparent; }
         </p>
         <div class="training-list">
           <div class="training-item">
-            <div class="training-item__icon">💻</div>
+            <div class="training-item__icon" aria-hidden="true">💻</div>
             <div>
               <div class="training-item__title">Treinamentos Online</div>
               <div class="training-item__body">Módulos digitais acessíveis a colaboradores e atletas, com conteúdo sobre ética, anticorrupção, proteção de dados e integridade no esporte.</div>
             </div>
           </div>
           <div class="training-item">
-            <div class="training-item__icon">🎓</div>
+            <div class="training-item__icon" aria-hidden="true">🎓</div>
             <div>
               <div class="training-item__title">Treinamentos Presenciais</div>
               <div class="training-item__body">Workshops, palestras e capacitações presenciais com foco em temas específicos para diferentes públicos internos e externos.</div>
@@ -1571,14 +1580,14 @@ button { -webkit-tap-highlight-color: transparent; }
           </div>
           <div class="training-row">
             <div class="training-item training-item--compact">
-              <div class="training-item__icon">📢</div>
+              <div class="training-item__icon" aria-hidden="true">📢</div>
               <div>
                 <div class="training-item__title">Comunicações e Publicações</div>
                 <div class="training-item__body">Materiais de comunicação interna, campanhas de sensibilização e publicações institucionais para manter o tema de integridade em destaque.</div>
               </div>
             </div>
             <div class="training-item training-item--compact">
-              <div class="training-item__icon">🎬</div>
+              <div class="training-item__icon" aria-hidden="true">🎬</div>
               <div>
                 <div class="training-item__title">Vídeo de Diretrizes Gerais</div>
                 <div class="training-item__body">Material audiovisual que apresenta as principais diretrizes do Programa ÉTICO de forma acessível e engajadora para todos os públicos.</div>
@@ -1711,10 +1720,10 @@ button { -webkit-tap-highlight-color: transparent; }
 <!-- ============================================================
      RESULTADOS
      ============================================================ -->
-<section id="resultados" class="resultados-section section-pad" aria-label="Resultados do Programa">
+<section id="resultados" class="resultados-section section-pad" hidden aria-label="Resultados do Programa">
   <div class="container">
     <div class="resultados-placeholder">
-      <div class="resultados-placeholder__icon">📊</div>
+      <div class="resultados-placeholder__icon" aria-hidden="true">📊</div>
       <h2 class="resultados-placeholder__title">Resultados e Indicadores</h2>
       <p class="resultados-placeholder__body">
         Em breve, esta seção apresentará os indicadores e resultados do Programa ÉTICO: número de treinamentos realizados, relatos recebidos pelo Canal Ético, terceiros analisados e ações de melhoria implementadas.
@@ -1747,14 +1756,16 @@ button { -webkit-tap-highlight-color: transparent; }
   </div>
 </section>
 
+</main>
+
 <!-- ============================================================
      FOOTER
      ============================================================ -->
 <footer class="site-footer" aria-label="Rodapé">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img class="footer-shield" src="./assets/escudo-atletico-borda-branca.png" alt="Escudo Atlético Mineiro">
-      <img class="footer-logo-etico" src="./assets/etico-logo-fundo-preto.png" alt="Programa ÉTICO">
+      <img class="footer-shield" src="./assets/escudo-atletico-borda-branca.png" alt="Escudo do Clube Atlético Mineiro">
+      <img class="footer-logo-etico" src="./assets/etico-logo-web.png" alt="Programa ÉTICO">
     </div>
     <div class="footer-links">
       <a href="https://atletico.com.br" target="_blank" rel="noopener">Site do Galo</a>
@@ -1763,7 +1774,7 @@ button { -webkit-tap-highlight-color: transparent; }
       <a href="https://atletico.com.br/wp-content/uploads/2026/07/CODIGO-DE-ETICA-VF-07.2026.pdf" target="_blank" rel="noopener">Código de Ética</a>
       <a href="https://canaletico.atletico.com.br" target="_blank" rel="noopener">Canal Ético</a>
     </div>
-    <div class="footer-copy">© Atlético Mineiro SAF · Programa ÉTICO</div>
+    <div class="footer-copy">© Clube Atlético Mineiro · Programa ÉTICO</div>
   </div>
 </footer>
 
