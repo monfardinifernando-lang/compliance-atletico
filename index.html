@@ -2,6 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<!-- PrivacyTools: bloqueio automático de cookies até o consentimento (deve ser o primeiro script) -->
+<script src='https://cdn.privacytools.com.br/public_api/banner/autoblock/v3/NjXQ21915191.js?t=1'></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programa ÉTICO — Atlético</title>
 <meta name="description" content="Conheça o Programa ÉTICO do Atlético: governança, políticas, privacidade, treinamento público, ESG e Canal Ético.">
@@ -826,6 +828,8 @@ button { -webkit-tap-highlight-color: transparent; }
 .footer-links { display: flex; gap: 20px; font-size: 12px; }
 .footer-links a { color: rgba(255,255,255,.45); text-decoration: none; transition: color .2s; }
 .footer-links a:hover { color: var(--gold); }
+.footer-links button { background: none; border: 0; padding: 0; font: inherit; color: rgba(255,255,255,.45); cursor: pointer; transition: color .2s; }
+.footer-links button:hover { color: var(--gold); }
 .footer-copy { font-size: 12px; }
 
 /* ============================================================
@@ -1771,6 +1775,7 @@ button { -webkit-tap-highlight-color: transparent; }
       <a href="https://atletico.com.br" target="_blank" rel="noopener">Site do Galo</a>
       <a href="https://galonaveia.atletico.com.br/portal-de-privacidade" target="_blank" rel="noopener">Privacidade</a>
       <a href="./treinamento-etico/">Treinamento ÉTICO</a>
+      <button type="button" onclick="if(window.privacyToolsShowCookiePreferences){privacyToolsShowCookiePreferences()}">Preferências de cookies</button>
       <a href="https://atletico.com.br/wp-content/uploads/2026/07/CODIGO-DE-ETICA-VF-07.2026.pdf" target="_blank" rel="noopener">Código de Ética</a>
       <a href="https://canaletico.atletico.com.br" target="_blank" rel="noopener">Canal Ético</a>
     </div>
@@ -2023,5 +2028,8 @@ document.querySelectorAll('.video-facade').forEach(function(btn){
   });
 });
 </script>
+<!-- PrivacyTools: banner de consentimento de cookies -->
+<link rel="stylesheet" href="https://cdn.privacytools.com.br/public_api/banner/style/yBvm21915191.css?t=1">
+<script type="text/javascript" src="https://cdn.privacytools.com.br/public_api/banner/script/bottom/yBvm21915191.js?t=1"></script>
 </body>
 </html>
